@@ -2,10 +2,10 @@ trigger:
 - main
 
 variables:
-  pythonVersion: '3.12'
+  pythonVersion: '3.9'
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'windows-latest'  # Changed from ubuntu-latest to windows-latest
 
 steps:
 - task: UsePythonVersion@0
@@ -48,13 +48,12 @@ steps:
 
 # Package application
 - script: |
-    mkdir -p $(Build.ArtifactStagingDirectory)
-    zip -r $(Build.ArtifactStagingDirectory)/app.zip . -x "*.git*"
+    powershell Compress-Archive -Path * -DestinationPath $(Build.ArtifactStagingDirectory)\app.zip -Force
   displayName: 'Archive Application'
 
 # Deploy to Azure Web App
 - task: AzureWebApp@1
   inputs:
     appName: 'ams-demo-app'
-    package: '$(Build.ArtifactStagingDirectory)/app.zip'
+    package: '$(Build.ArtifactStagingDirectory)\app.zip'
     deploymentMethod: 'auto'

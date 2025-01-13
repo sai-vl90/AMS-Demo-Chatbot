@@ -1,49 +1,64 @@
 {
   "examples": [
     {
-      "type": "table",
-      "question": "What is the naming convention for GL accounts in SAP Finance?",
-      "answer": "| **GL Account Type**         | **Number Range** |\n|-----------------------------|------------------|\n| Sales                       | 100000–199999    |\n| COGS (Cost of Goods Sold)   | 200000–299999    |\n| Overheads                  | 300000–399999    |\n| Fixed Assets               | 500000–599999    |\n| Stock & Debtors            | 600000–699999    |\n| Creditors                  | 700000–799999    |\n| Intercompany               | 800000–899999    |\n| Capital & Reserves         | 900000–999999    |"
-    },
-    {
-      "type": "process",
-      "question": "Summarize the process for creating a Cost Centre in SAP.",
-      "answer": "- **Request Creation:** A new department requests a Cost Centre.\n- **Approval:** Approval is required; rejected requests end here.\n- **Master Data Creation:** The Master Data team creates the Cost Centre in SAP and aligns it with a relevant Profit Centre.\n- **Configuration Updates:** IT updates any related configurations.\n- **Notification:** The request originator is informed once the Cost Centre is ready."
+      "type": "definition",
+      "question": "What is a supply chain?",
+      "answer": "A supply chain is a network of individuals, organizations, resources, activities, and technologies involved in the creation and sale of a product, from the delivery of source materials to the end customer. This is an example of how to structure a definition response."
     },
     {
       "type": "comparison",
-      "question": "What is the difference between Profit Centres and Cost Centres?",
-      "answer": "| **Aspect**                 | **Profit Centres**                                      | **Cost Centres**                                   |\n|----------------------------|--------------------------------------------------------|--------------------------------------------------|\n| **Purpose**                | Represents revenue-generating areas for profitability.  | Tracks and manages overhead costs.                |\n| **Focus**                  | Profitability and revenue reporting.                    | Cost allocation and control.                      |\n| **Alignment**              | Typically aligned with sales teams.                    | Aligned with departments like IT or Finance.      |\n| **Example Use Case**       | Customer/product profitability analysis.                | Allocating costs to responsibility units.         |"
+      "question": "How does a partnership differ from a corporation?",
+      "answer": "| **Aspect**         | **Partnership**                                | **Corporation**                                |\n|-------------------|---------------------------------------------|---------------------------------------------|\n| **Ownership**    | Owned by two or more individuals.           | Owned by shareholders.                      |\n| **Liability**    | Partners have personal liability.           | Limited liability for shareholders.         |\n| **Taxation**     | Income is taxed as personal income.         | Separate entity; taxed as corporate income. |\n| **Management**   | Managed by partners.                        | Managed by a board of directors.            |\n\nThis is an example of how to format a comparison table for answering such questions."
     },
     {
-      "type": "definition",
-      "question": "Describe the purpose of House Banks in SAP Finance.",
-      "answer": "House Banks are representations of financial institutions with which the company maintains accounts. They are essential for:\n- **Bank Statement Processing:** Linking transactions to specific bank accounts.\n- **Account Management:** Handling high-volume accounts and transactions.\n- **Integration:** Each bank account links to a unique GL account for seamless processing."
+      "type": "summarization",
+      "question": "Summarize the role of customer service in business.",
+      "answer": "Customer service plays a pivotal role in business success by building strong customer relationships, resolving issues promptly, and enhancing brand loyalty. Excellent customer service contributes to customer retention, positive word-of-mouth, and long-term profitability. This demonstrates how to structure a summarization response."
     },
     {
       "type": "troubleshooting",
-      "question": "What happens if GL accounts are not properly configured for open item management?",
-      "answer": "- **Cause:** Failure to enable open item management for accounts requiring reconciliation.\n- **Effect:** \n  - Unmatched items remain unresolved in the account.\n  - Monthly reconciliations are hindered.\n  - Reporting inaccuracies occur due to incomplete clearing."
+      "question": "What are common issues when integrating APIs?",
+      "answer": "- **Authentication Failures:** Incorrect credentials or token mismanagement.\n- **Data Format Mismatch:** The API and client use incompatible formats.\n- **Timeouts:** Delays in server response causing errors.\n- **Versioning Conflicts:** Updates to the API breaking older integrations.\n\nThis response serves as an example for structuring troubleshooting guidance."
     },
     {
       "type": "integration",
-      "question": "How do the Controlling (CO) and Finance (FI) modules integrate in SAP?",
-      "answer": "- **Cost Elements:** GL accounts in FI are represented as cost elements in CO, enabling financial data flow.\n- **Profit Centres:** Data from FI is used in CO to analyze profitability.\n- **Integration Points:** Shared master data like Chart of Accounts ensures consistency across modules.\n\nThis integration allows for seamless financial reporting and managerial accounting."
+      "question": "How do CRM and ERP systems integrate?",
+      "answer": "- **Data Synchronization:** Customer data flows seamlessly between CRM and ERP.\n- **Order Management:** CRM captures orders which ERP processes for fulfillment.\n- **Financial Reporting:** ERP uses CRM sales data for revenue analysis.\n- **Customer Insights:** ERP transaction data enhances CRM's customer profiling.\n\nThis is a template example for answering integration-related questions."
+    },
+    {
+      "type": "explanation",
+      "question": "Explain the importance of version control in software development.",
+      "answer": "Version control systems allow developers to track changes, collaborate effectively, and revert to earlier versions if needed. This ensures code integrity, streamlines collaboration in teams, and facilitates project management by maintaining a complete history of code modifications. This serves as an example response to explanation-type questions."
+    },
+    {
+      "type": "example",
+      "question": "Provide an example of using predictive analytics in retail.",
+      "answer": "**Example:** A retail chain uses predictive analytics to forecast product demand based on historical sales data, seasonal trends, and local events. This enables better inventory management and reduced stockouts. This is a sample structure for providing illustrative examples."
     },
     {
       "type": "informal",
-      "question": "What's the deal with GL and bank stuff?",
-      "answer": "**GL Accounts for Bank Transactions:**\n- GL accounts are used to represent bank accounts in SAP. For example:\n  - Main Account: Represents cleared funds.\n  - Sub-Accounts: Handles incoming/outgoing transactions and bank charges.\n\n**Integration Between GL and Bank Processes:**\n- Bank transactions are recorded in GL accounts for reconciliation.\n- Bank statement processing updates GL accounts with cleared amounts."
+      "question": "What's the deal with APIs?",
+      "answer": "**APIs (Application Programming Interfaces):**\n- They're like bridges letting two apps talk to each other.\n- Example: Your weather app gets live updates from a weather service API.\n- Why care? APIs make apps smarter and more connected.\n\nThis illustrates how to provide informal responses."
     },
     {
-      "type": "troubleshooting_informal",
-      "question": "What happens if dummy profit centre messes up?",
-      "answer": "**If the DUMMY Profit Centre Is Misconfigured:**\n- Transactions may fail because SAP requires a valid fallback Profit Centre for P&L postings.\n\n**Troubleshooting DUMMY Profit Centre Issues:**\n- Analyze DUMMY postings using standard reports.\n- Identify and fix the root cause (e.g., missing or incorrect Profit Centre assignments)."
+      "type": "contextualization",
+      "question": "How does cloud computing relate to energy efficiency?",
+      "answer": "Cloud computing improves energy efficiency by consolidating computing resources into optimized data centers, reducing the need for physical hardware and energy consumption across distributed systems. This is an example of contextualizing a response based on a specific query."
     },
     {
-      "type": "overview_informal",
-      "question": "What's the chart thing in finance?",
-      "answer": "**Chart of Accounts:**\n- A list of GL accounts used for financial reporting.\n- Types:\n  - Operating Chart of Accounts: Used for daily transactions.\n  - Group Chart of Accounts: For consolidated group reporting.\n  - Country-specific Chart of Accounts: To meet legal requirements.\n\n**GL Account Hierarchy:**\n- Number ranges are grouped by functional areas:\n  - Sales: 100000–199999\n  - Overheads: 300000–399999\n  - Fixed Assets: 500000–599999"
+      "type": "technical_specification",
+      "question": "What are the system requirements for deploying this application?",
+      "answer": "**System Requirements:**\n- **Hardware:**\n  - Minimum CPU: 4 cores\n  - RAM: 8GB minimum\n  - Storage: 100GB SSD\n- **Software:**\n  - Operating System: Linux/Windows Server\n  - Dependencies: Listed versions\n  - Network: 100Mbps minimum"
+    },
+    {
+      "type": "workflow_explanation",
+      "question": "What is the typical workflow for setting up a new user in an IT system?",
+      "answer": "- **Request Submission:** A manager submits a request for a new user setup.\n- **Approval:** The request is reviewed and approved by the IT team.\n- **User Account Creation:** The IT team creates the user account and assigns appropriate roles.\n- **Notification:** The new user is informed of their credentials and access rights.\n\nThis example shows how to structure a workflow explanation."
+    },
+    {
+      "type": "procedure",
+      "question": "How to implement data backup procedures?",
+      "answer": "1. **Assessment:**\n   - Identify critical data\n   - Determine backup frequency\n2. **Implementation:**\n   - Configure backup tools\n   - Set up automation\n3. **Verification:**\n   - Test backup integrity\n   - Document recovery procedures"
     }
   ],
   "formatting_rules": {

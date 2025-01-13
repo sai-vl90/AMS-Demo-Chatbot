@@ -1,0 +1,465 @@
+{
+  "sections": [
+    {
+      "title": "Page 1",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 1 Instruction for Business Process Release: Supplier Complaint Management System: SAP ECC 6.0 Module: Quality Management Document No. : IM_QM_001 Title: Complaint Management Subtitle: Business Process Created by : Vivek Sharma Date : 26.12.2011 Last Updated by : Vivek Sharma Date of change : 27.04.2012",
+      "metadata": {
+        "title": "Page 1",
+        "level": 1,
+        "path": "Page 1",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 1
+      },
+      "keywords": [
+        "management",
+        "complaint",
+        "complaint management",
+        "vivek sharma",
+        "process",
+        "business process",
+        "date",
+        "vivek",
+        "business",
+        "sharma"
+      ]
+    },
+    {
+      "title": "Page 2",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 2 Content: 1 Background....................................... ................................................... ...................................... 3 2 Supplier Complaint Management.................... ................................................... ...................... 3 2.1 QM01: Create Supplier Complaint................ ................................................... ................. 3 3 Supplier Complaint Management: Status Definitions ................................................... ......... 13 3.2 Complaint Management: Status ................... ................................................... ............... 13 4 Supplier Complaint Management- Historical Data Mo nitoring ........................................... .. 14 4.3 Detailing for Historical Data Tracking : ....... ................................................... ................",
+      "metadata": {
+        "title": "Page 2",
+        "level": 1,
+        "path": "Page 2",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 2
+      },
+      "keywords": [
+        "complaint",
+        "management",
+        "complaint management",
+        "supplier",
+        "supplier complaint",
+        "13",
+        "status",
+        "management status",
+        "historical data",
+        "historical"
+      ]
+    },
+    {
+      "title": "Page 2",
+      "level": 1,
+      "content": ". .. 14 4.3 Detailing for Historical Data Tracking : ....... ................................................... ................. 14 4.4 Detailing for Historical Data Tracking : Action Log ............................................... .......... 16 5 Signoff: ......................................... ................................................... ........................................ 17",
+      "metadata": {
+        "title": "Page 2",
+        "level": 1,
+        "path": "Page 2",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 2
+      },
+      "keywords": [
+        "tracking",
+        "historical data",
+        "14",
+        "14 detailing",
+        "data",
+        "data tracking",
+        "detailing",
+        "historical",
+        "detailing historical"
+      ]
+    },
+    {
+      "title": "Page 3",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 3 1 Background In IEE SAP system, Quality notifications would be u sed to manage the existing complaint man- agement system. Currently IEE follow following thre e business processes. 1. Customer Complaint Management System 2. Supplier Complaint Management System 3. Internal Complaint Management System Quality notifications would help IEE in managing th eir complaint management system from initi- ating the complaints to finally closing the complai nts with complete analysis and reporting which would be further used for communicating with both i nternal and external customer and suppliers. This document highlights the various steps involved in completing a Supplier Complaint in SAP successfully so that the subsequent reporting syste ms can be used. 2 Supplier Complaint Management 2.1 QM01: Create Supplier Complaint Initial Screen once QM01 transaction is entered.",
+      "metadata": {
+        "title": "Page 3",
+        "level": 1,
+        "path": "Page 3",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 3
+      },
+      "keywords": [
+        "complaint",
+        "complaint management",
+        "management",
+        "supplier complaint",
+        "supplier",
+        "iee",
+        "customer",
+        "notifications",
+        "used",
+        "qm01"
+      ]
+    },
+    {
+      "title": "Page 4",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 4 Selection of Appropriate Notification Type: Z2 Initial Screen once QM01 transaction is entered. Initial Screen once QM01 transaction is entered.",
+      "metadata": {
+        "title": "Page 4",
+        "level": 1,
+        "path": "Page 4",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 4
+      },
+      "keywords": [
+        "qm01",
+        "entered",
+        "transaction entered",
+        "transaction",
+        "screen qm01",
+        "screen",
+        "qm01 transaction",
+        "initial",
+        "initial screen",
+        "management"
+      ]
+    },
+    {
+      "title": "Page 5",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 5 Reference Object - First TAB of Notification Transaction i.e. QM01 Maintain the following Details: 1. Material Details 2. Plant details 3. Reference Number 4. Reference Notification Subject-Second TAB of Notification Transaction i.e. QM01 1. Short Description of the Complaint. 2. Detailed Description of the Complaint",
+      "metadata": {
+        "title": "Page 5",
+        "level": 1,
+        "path": "Page 5",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 5
+      },
+      "keywords": [
+        "reference",
+        "notification",
+        "details",
+        "complaint",
+        "transaction",
+        "qm01",
+        "notification transaction",
+        "tab",
+        "tab notification",
+        "description complaint"
+      ]
+    },
+    {
+      "title": "Page 6",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 6 Processing Data - Third TAB of Notification Transaction i.e. QM01 1. Partner Functions: i. Department Partner Function ii. Author Partner Function iii. Person Responsible Partner iv. Vendor Partner Function Function This is the TAB for the Complaint Data. In the Overview TAB folllowing information is maintained. i. Defect Types This is the predeined list of Defect Types in IEE. This data can be updated through system configuration.",
+      "metadata": {
+        "title": "Page 6",
+        "level": 1,
+        "path": "Page 6",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 6
+      },
+      "keywords": [
+        "partner",
+        "function",
+        "data",
+        "partner function",
+        "tab",
+        "types",
+        "complaint",
+        "defect",
+        "defect types",
+        "notification"
+      ]
+    },
+    {
+      "title": "Page 7",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 7 Overview Data View Long Text is maintained for the selected Defect Type.This data reflects in the supplier complaint report Long Text Details This is the SUBTAB screen for Root Cause.",
+      "metadata": {
+        "title": "Page 7",
+        "level": 1,
+        "path": "Page 7",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 7
+      },
+      "keywords": [
+        "complaint",
+        "data",
+        "text",
+        "long",
+        "long text",
+        "type data",
+        "screen",
+        "report long",
+        "root",
+        "root cause"
+      ]
+    },
+    {
+      "title": "Page 8",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 8 SUBTAB screen for Rootcaus e data This is the TAB for the Complaint Data. In the Root Cause TAB folllowing information is maintained.",
+      "metadata": {
+        "title": "Page 8",
+        "level": 1,
+        "path": "Page 8",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 8
+      },
+      "keywords": [
+        "tab",
+        "complaint",
+        "data",
+        "tab complaint",
+        "folllowing information",
+        "im_qm_002",
+        "im_qm_002 subtab",
+        "information",
+        "information maintained",
+        "management"
+      ]
+    },
+    {
+      "title": "Page 9",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 9 On saving the transaction Notification is created for Supplier Process.",
+      "metadata": {
+        "title": "Page 9",
+        "level": 1,
+        "path": "Page 9",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 9
+      },
+      "keywords": [
+        "transaction notification",
+        "management im_qm_002",
+        "complaint management",
+        "created",
+        "created supplier",
+        "im_qm_002",
+        "im_qm_002 saving",
+        "management",
+        "notification",
+        "transaction"
+      ]
+    },
+    {
+      "title": "Page 10",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 10",
+      "metadata": {
+        "title": "Page 10",
+        "level": 1,
+        "path": "Page 10",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 10
+      },
+      "keywords": [
+        "management im_qm_002",
+        "management",
+        "im_qm_002 10",
+        "im_qm_002",
+        "complaint management",
+        "complaint",
+        "10"
+      ]
+    },
+    {
+      "title": "Page 11",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 11",
+      "metadata": {
+        "title": "Page 11",
+        "level": 1,
+        "path": "Page 11",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 11
+      },
+      "keywords": [
+        "management im_qm_002",
+        "management",
+        "im_qm_002 11",
+        "im_qm_002",
+        "complaint management",
+        "complaint",
+        "11"
+      ]
+    },
+    {
+      "title": "Page 12",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 12",
+      "metadata": {
+        "title": "Page 12",
+        "level": 1,
+        "path": "Page 12",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 12
+      },
+      "keywords": [
+        "management im_qm_002",
+        "management",
+        "im_qm_002 12",
+        "im_qm_002",
+        "complaint management",
+        "complaint",
+        "12"
+      ]
+    },
+    {
+      "title": "Page 13",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 13 3 Supplier Complaint Management: Status Definitions 3.2 Complaint Management: Status Status in Complaint management would be independent of the Respective Complaint Process and would have the same interpretation across the relea se. Following is the definition of various statuses which would in usage. 1. OSNO: Outstanding notification 2. NOTE: Notification (external) 3. NOPR: Notification in process 4. OSTS: Outstanding task(s) exist(s) 5. NOCO: Notification Completed 6. ATCO: All Tasks Completed 7. TSOS: Task Outstanding 8. NOTI: Notification (internal) 9. TSRL: Task Released 10. TSCO: Task Completed 11. TSSC: Task Successful",
+      "metadata": {
+        "title": "Page 13",
+        "level": 1,
+        "path": "Page 13",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 13
+      },
+      "keywords": [
+        "task",
+        "complaint",
+        "notification",
+        "complaint management",
+        "management",
+        "status",
+        "completed",
+        "outstanding",
+        "process",
+        "management status"
+      ]
+    },
+    {
+      "title": "Page 14",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 14 4 Supplier Complaint Management- Historical Data Moni toring 4.3 Detailing for Historical Data Tracking : Dummy Internal Complaint - 20000744 8",
+      "metadata": {
+        "title": "Page 14",
+        "level": 1,
+        "path": "Page 14",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 14
+      },
+      "keywords": [
+        "complaint",
+        "complaint management",
+        "data",
+        "historical",
+        "historical data",
+        "management",
+        "tracking",
+        "internal",
+        "dummy internal",
+        "im_qm_002"
+      ]
+    },
+    {
+      "title": "Page 15",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 15 Action Log for Historical data monitoring for an Internal Complaint",
+      "metadata": {
+        "title": "Page 15",
+        "level": 1,
+        "path": "Page 15",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 15
+      },
+      "keywords": [
+        "complaint",
+        "monitoring internal",
+        "monitoring",
+        "15 action",
+        "action",
+        "action log",
+        "complaint management",
+        "data",
+        "data monitoring",
+        "historical"
+      ]
+    },
+    {
+      "title": "Page 16",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 16 4.4 Detailing for Historical Data Tracking : Action Log Action Log captures all the historical changes for Notification in SAP",
+      "metadata": {
+        "title": "Page 16",
+        "level": 1,
+        "path": "Page 16",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 16
+      },
+      "keywords": [
+        "action",
+        "action log",
+        "log",
+        "historical",
+        "sap",
+        "historical changes",
+        "data",
+        "data tracking",
+        "detailing",
+        "detailing historical"
+      ]
+    },
+    {
+      "title": "Page 17",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002 17 5 Signoff: Name Role Status (Ap- proved/Rejected) Signature Date Olivier Gasche Project Sponsor Georg Thome IT SPOC. Joerg Reicherz Key User Kai Windel Substitute Key User Jolanta Viskere-Apine Local Key User IEE Lux- embourg Rena Yang Local Key User IEE China Martin Martinko Local Key User IEE Slovakia Sang-Jun KIM Local Key User IEE Korea Jaret JARDINE Local Key User IEE USA",
+      "metadata": {
+        "title": "Page 17",
+        "level": 1,
+        "path": "Page 17",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 17
+      },
+      "keywords": [
+        "user",
+        "key",
+        "key user",
+        "user iee",
+        "iee",
+        "local",
+        "local key",
+        "project sponsor",
+        "proved",
+        "proved rejected"
+      ]
+    }
+  ],
+  "tables": [],
+  "table_contexts": [],
+  "document_name": "SQA Main Business Process-V.1.1.pdf"
+}

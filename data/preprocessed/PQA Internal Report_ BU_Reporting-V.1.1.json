@@ -1,0 +1,215 @@
+{
+  "sections": [
+    {
+      "title": "Page 1",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002_3-B 1 Instruction for Business Process Release System: SAP ECC 6.0 Module: Quality Management Document No. : IM_QM_002_3-B Title: Complaint Management Subtitle: Internal Complaint Business reporting Created by : Vivek Sharma Date : 12.05.2012 Last Updated by : Vivek Sharma Date of change : 13.05.2012",
+      "metadata": {
+        "title": "Page 1",
+        "level": 1,
+        "path": "Page 1",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 1
+      },
+      "keywords": [
+        "management",
+        "complaint",
+        "vivek",
+        "05 2012",
+        "2012",
+        "business",
+        "complaint management",
+        "date",
+        "im_qm_002_3",
+        "vivek sharma"
+      ]
+    },
+    {
+      "title": "Page 2",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002_3-B 2 1 Introduction and Background: ..................... ................................................... .......................... 3 2 Internal Complaints: Reporting Mechanism: User Re sponsible.......................................... ..... 4 2.1 ZUserassignment : Internal Complaint Report .... ................................................... .......... 4 2.2 ZUserassignment : Internal Complaint Report: Re port Layout ........................................ 5 2.2.1 ZUserassignment : Internal Complaint Report :: Report Layout :::At Header Level ......... 5 2.2.2 ZUserassignment : Internal Complaint Report :: Report Layout :::At Action Level........... 6 3 Sign Off: ........................................ ................................................... .......................................... 7",
+      "metadata": {
+        "title": "Page 2",
+        "level": 1,
+        "path": "Page 2",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 2
+      },
+      "keywords": [
+        "report",
+        "complaint",
+        "internal",
+        "zuserassignment",
+        "complaint report",
+        "internal complaint",
+        "zuserassignment internal",
+        "layout",
+        "report layout",
+        "level"
+      ]
+    },
+    {
+      "title": "Page 3",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002_3-B 3 1 Introduction and Background: In IEE SAP system, Quality notifications would be u sed to manage the existing complaint management system. Currently IEE follow following three busine ss processes. 1. Customer Complaint Management System 2. Supplier Complaint Management System 3. Internal Complaint Management System Quality notifications would help IEE in managing th eir complaint management system from initiating the complaints to finally closing the complaints wi th complete analysis and reporting which would be further used for communicating with both internal a nd external customer and suppliers. This report is designed based on IEE requirement to have a reporting mechanism in SAP which provides information regarding actions assigned to a busines s user, so that he/she is aware of all the actions for he/she is responsible to act upon in complaint Mana gement",
+      "metadata": {
+        "title": "Page 3",
+        "level": 1,
+        "path": "Page 3",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 3
+      },
+      "keywords": [
+        "complaint",
+        "management",
+        "complaint management",
+        "iee",
+        "sap",
+        "th",
+        "complaints",
+        "customer",
+        "internal",
+        "information"
+      ]
+    },
+    {
+      "title": "Page 3",
+      "level": 1,
+      "content": ". This report is created out of the ZCOMPDETAIL report and is modified to make it accor ding to business user requirement based on the discussed carried. The key difference between the ZCOMPDETAIL and ZUSE RASSIGNMENT transaction is that first transaction provides information one executed, whil e the latter run and provides result only relevant to the user ID by which the transaction is being execu ted with. This transaction at header level provides result on ly if the user ID is being maintained as a PERSON RESPONSIBLE in the complaint Management. And action level it p rovides result only if the user ID is being maintained as a RESPONSIBLE FOR ACTION in the complaint Management. Currently this report is designed to operate for bo th Customer (Z1) and Internal (Z3) Complaints.",
+      "metadata": {
+        "title": "Page 3",
+        "level": 1,
+        "path": "Page 3",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 3
+      },
+      "keywords": [
+        "transaction",
+        "user id",
+        "id",
+        "result",
+        "user",
+        "report",
+        "provides",
+        "provides result",
+        "responsible",
+        "management"
+      ]
+    },
+    {
+      "title": "Page 4",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002_3-B 4 2 Internal Complaints: Reporting Mechanism: User Resp onsible 2.1 ZUserassignment : Internal Complaint Report Selection Criteria would be Date or Date Range There are two options to use this report. 1. Header Level: At the level the transaction reports information at the Notification level. 2. Action Level: At the level the transaction reports information at the Activity level for Notification.",
+      "metadata": {
+        "title": "Page 4",
+        "level": 1,
+        "path": "Page 4",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 4
+      },
+      "keywords": [
+        "level",
+        "transaction reports",
+        "level level",
+        "reports information",
+        "reports",
+        "report",
+        "complaint",
+        "date",
+        "information",
+        "internal"
+      ]
+    },
+    {
+      "title": "Page 5",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002_3-B 5 2.2 ZUserassignment : Internal Complaint Report: Report Layout For this selection criteria the report has been des igned in such a way that system picks the user id b y which this transaction is being executed and checks whether this User ID has been used as a PERSON RESPONSIBLE in any of the complaints created by system. 2.2.1 ZUserassignment : Internal Complaint Report :: Report Layout :::At Header Level Result: This report screen shot is in continuation. PERSON RESPONSIBLE",
+      "metadata": {
+        "title": "Page 5",
+        "level": 1,
+        "path": "Page 5",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 5
+      },
+      "keywords": [
+        "report",
+        "complaint",
+        "zuserassignment",
+        "complaint report",
+        "id",
+        "internal",
+        "internal complaint",
+        "layout",
+        "person",
+        "person responsible"
+      ]
+    },
+    {
+      "title": "Page 6",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002_3-B 6 2.2.2 ZUserassignment : Internal Complaint Report :: Report Layout :::At Action Level For this selection criteria the report has been des igned in such a way that system picks the user id b y which this transaction is being executed and checks whether this User ID has been used as a RESPONSIBLE FOR ACTION in any of the complaints created by system. Result: RESPONSIBLE FOR ACTION",
+      "metadata": {
+        "title": "Page 6",
+        "level": 1,
+        "path": "Page 6",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 6
+      },
+      "keywords": [
+        "action",
+        "report",
+        "responsible",
+        "complaint",
+        "id",
+        "user",
+        "user id",
+        "responsible action",
+        "report report",
+        "report layout"
+      ]
+    },
+    {
+      "title": "Page 7",
+      "level": 1,
+      "content": "Complaint Management IM_QM_002_3-B 7 3 Sign Off: Name Role Status (Ap- proved/Rejected) Signature Date Olivier Gasche Project Sponsor Dennis Connolly IT SPOC. Joerg Reicherz Key User Kai Windel Substitute Key User Jolanta Viskere-Apine Local Key User IEE Lux- embourg Rena Yang Local Key User IEE China Martin Martinko Local Key User IEE Slovakia Sang-Jun KIM Local Key User IEE Korea Jaret JARDINE Local Key User IEE USA",
+      "metadata": {
+        "title": "Page 7",
+        "level": 1,
+        "path": "Page 7",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 7
+      },
+      "keywords": [
+        "user",
+        "key",
+        "key user",
+        "user iee",
+        "iee",
+        "local",
+        "local key",
+        "olivier gasche",
+        "project",
+        "project sponsor"
+      ]
+    }
+  ],
+  "tables": [],
+  "table_contexts": [],
+  "document_name": "PQA Internal Report_ BU_Reporting-V.1.1.pdf"
+}

@@ -2,33 +2,36 @@ import os
 import sys
 import re
 import json
-from typing import List, Dict, Tuple
-from dataclasses import dataclass
 import logging
+from typing import List, Dict, Optional
+from dataclasses import dataclass
+from collections import defaultdict
 from functools import lru_cache
+import atexit
 
-from langchain_community.vectorstores import DeepLake
+from transformers import T5Tokenizer
+from langchain_community.vectorstores.azuresearch import AzureSearch
+from langchain.chains import create_retrieval_chain
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
-from langchain.retrievers import MultiQueryRetriever
-from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers import MultiQueryRetriever, ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import LLMChainExtractor
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-from transformers import T5Tokenizer
+from langsmith import traceable
 
-# Set up project path
-project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Load project path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)
 
 # Local imports
 from src.retrieval.pre_retrieval import PreRetrievalProcessor, PreRetrievalResult
 from src.retrieval.post_retrieval import PostRetrievalProcessor, PostProcessingResult, RetrievedDocument
 from src.config_loader import load_config, set_environment_variables
-
-# Setup logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 @dataclass
 class RAGResponse:
@@ -39,10 +42,28 @@ class RAGResponse:
     query_analysis: Dict
     chain_of_thought: Dict
 
+class TokenManager:
+    def __init__(self):
+        self.tokenizer = T5Tokenizer.from_pretrained("t5-base")
+
+    def count_tokens(self, text: str) -> int:
+        return len(self.tokenizer.encode(text))
+
+    def truncate_text(self, text: str, max_tokens: int) -> str:
+        tokens = self.tokenizer.encode(text, max_length=max_tokens, truncation=True)
+        return self.tokenizer.decode(tokens, skip_special_tokens=True)
+
+class SafeAzureSearch(AzureSearch):
+    def __del__(self):
+        try:
+            if sys.meta_path is not None:
+                super().__del__()
+        except Exception:
+            pass
+
 class RAGPipeline:
     def __init__(
         self,
-        dataset_path: str,
         huggingface_token: str,
         embeddings_model: str = "sentence-transformers/all-MiniLM-L6-v2"
     ):
@@ -50,6 +71,12 @@ class RAGPipeline:
         try:
             # Load configuration
             self.config = load_config()
+
+            # Add token manager
+            self.token_manager = TokenManager()
+            # Add token limits
+            self.max_input_tokens = 800  # 50 for query + 150 for context
+            self.max_output_tokens = 200
             
             # Load few-shot examples
             self.few_shot_examples = self._load_few_shot_examples()
@@ -61,27 +88,31 @@ class RAGPipeline:
             # Initialize embeddings
             self.embeddings = HuggingFaceEmbeddings(model_name=embeddings_model)
 
-            # Initialize vector store
-            self.vector_store = DeepLake(
-                dataset_path=dataset_path,
-                embedding=self.embeddings,
-                read_only=True
+            # Initialize vector store using the SafeAzureSearch subclass
+            self.vector_store = SafeAzureSearch(
+                azure_search_endpoint=self.config['azure_search']['endpoint'],  # Changed to self.config
+                azure_search_key=self.config['azure_search']['key'],            # Changed to self.config
+                index_name=self.config['azure_search']['index_name'],           # Changed to self.config
+                embedding_function=self.embeddings,
             )
 
             # Initialize LLM with Groq
             self.llm = ChatGroq(
                 groq_api_key=self.config['groq']['api_key'],
-                model_name="gemma2-9b-it",
-                temperature=0.3,
-                max_tokens=8192,
+                model_name="llama-3.3-70b-versatile",
+                temperature=0.2,
+                max_tokens=self.max_output_tokens,
                 model_kwargs={
                     "top_p": 0.95,
                 }
             )
-
+            
             # Set up retrievers and prompts
             self._setup_retrievers()
             self._setup_prompts()
+
+            # Register the cleanup method to be called at exit
+            atexit.register(self.cleanup)  # Added atexit registration
 
             logger.info("RAG pipeline initialized successfully")
 
@@ -89,26 +120,80 @@ class RAGPipeline:
             logger.error(f"Error initializing RAG pipeline: {str(e)}")
             raise
 
+    def cleanup(self):
+        """Explicitly clean up resources."""
+        try:
+            if self.vector_store:
+                del self.vector_store
+                self.vector_store = None
+                logger.info("AzureSearch vector_store cleaned up successfully.")
+        except Exception as e:
+            logger.error(f"Error during cleanup: {str(e)}")
+
+    # In rag_chain.py, update the _load_few_shot_examples method:
+
     def _load_few_shot_examples(self) -> Dict:
         """Load few-shot examples from JSON file"""
         try:
+            # Get the project root directory (2 levels up from the current file)
+            project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            
+            # Construct path to configs directory at project root
             config_dir = os.path.join(project_root, "configs")
+            
+            # Create configs directory if it doesn't exist
+            os.makedirs(config_dir, exist_ok=True)
+            
             examples_path = os.path.join(config_dir, "few_shot_examples.json")
+            
+            # If file doesn't exist, create it with default examples
+            if not os.path.exists(examples_path):
+                default_examples = {
+                    "examples": [
+                        {
+                            "type": "general",
+                            "question": "What are the main features of the system?",
+                            "answer": "The system includes the following key features:\n\n- **Document Processing**: Handles various document types\n- **Search Capability**: Enables efficient information retrieval\n- **Response Generation**: Provides accurate answers based on context"
+                        },
+                        {
+                            "type": "technical",
+                            "question": "How do I configure the system settings?",
+                            "answer": "To configure the system:\n\n1. Access the **configuration file** in the configs directory\n2. Update the necessary parameters\n3. Save and restart the application"
+                        }
+                    ],
+                    "formatting_rules": {
+                        "headers": "Use markdown headers",
+                        "lists": "Use bullet points with bold key terms",
+                        "emphasis": "Use bold for important terms",
+                        "tables": "Use markdown table format"
+                    }
+                }
+                
+                with open(examples_path, 'w', encoding='utf-8') as f:
+                    json.dump(default_examples, f, indent=4)
+                
+                logger.info(f"Created default few-shot examples file at {examples_path}")
+                return default_examples
+                
+            # Load existing file
             with open(examples_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
+                data = json.load(f)
+                logger.info(f"Successfully loaded few-shot examples from {examples_path}")
+                return data
+                
         except Exception as e:
             logger.error(f"Error loading few-shot examples: {str(e)}")
-            return {"examples": [], "formatting_rules": {}}
+            # Return empty defaults if there's an error
+            return {
+                "examples": [],
+                "formatting_rules": {}
+            }
 
     def _setup_retrievers(self):
         """Set up retrieval components"""
         self.base_retriever = self.vector_store.as_retriever(
-            search_type="mmr",
-            search_kwargs={
-                "k": 5,
-                "fetch_k": 20,
-                "lambda_mult": 0.7
-            }
+            search_type="similarity",
+            k=5  # Directly setting the 'k' parameter here
         )
 
         self.multi_retriever = MultiQueryRetriever.from_llm(
@@ -133,53 +218,71 @@ class RAGPipeline:
             f"Example {i+1} - {example['type'].title()}:\n"
             f"Question: {example['question']}\n"
             f"Answer: {example['answer']}"
-            for i, example in enumerate(examples[:4])  # Limit to 4 examples to manage prompt length
+            for i, example in enumerate(examples[:9])  # Limit to 4 examples to manage prompt length
         ])
         
         # Build formatting rules section
         rules_text = "\n".join([
-            "Follow these formatting rules strictly:",
-            "1. For tables:",
-            "   - Use proper markdown table syntax with aligned columns",
-            "   - Bold headers with **double asterisks**",
-            "   - Include divider row with proper dashes",
-            "",
-            "2. For lists:",
-            "   - Start each item with a hyphen (-)",
-            "   - Use **bold** for key terms or concepts",
-            "   - Indent sub-points with two spaces",
-            "",
-            "3. For sections:",
-            "   - Use **bold headers** for main sections",
-            "   - Keep consistent indentation",
-            "   - Separate sections with blank lines",
-            "",
-            "4. For technical terms:",
-            "   - Bold important SAP and technical terms with **double asterisks**",
-            "   - Use consistent capitalization for SAP modules (FI, CO, MM, etc.)",
-            "   - Reference GL account ranges with proper formatting"
-        ])
+        "Follow these formatting rules strictly:",
+        "1. For tables:",
+        "   - Use proper markdown table syntax with aligned columns.",
+        "   - Bold headers with **double asterisks**.",
+        "   - Include divider rows with proper dashes.",
+        "",
+        "2. For lists:",
+        "   - Start each item with a hyphen (-).",
+        "   - Use **bold** for key terms or concepts.",
+        "   - Indent sub-points with two spaces.",
+        "",
+        "3. For sections:",
+        "   - Use **bold headers** for main sections.",
+        "   - Keep consistent indentation.",
+        "   - Separate sections with blank lines.",
+        "",
+        "4. For technical terms:",
+        "   - Bold important technical terms with **double asterisks**.",
+        "   - Use consistent capitalization for domain-specific terms.",
+        "   - Maintain precision in numerical or coded references (e.g., GL account ranges)."
+        "5. Multilingual Support:",
+            "   - Always respond in the language of the question provided.",
+            "   - Maintain the same formatting style for all languages.",
+            "   - Translate technical terms accurately and provide English transliterations where necessary.",
+    ])
+
 
         # Combine into final prompt template
-        prompt_template = f"""You are an expert SAP Finance analyst providing precise answers from technical documents. Your responses must use proper markdown formatting and match the style of these examples:
+        prompt_template = f"""You are an assistant that strictly provides answers based on the provided documents. If a question cannot be answered using the documents, respond with:
+        "I cannot answer this question as it is outside the scope of the provided documents.". 
+        Your responses must adhere to the following guidelines and formatting rules, regardless of the document's domain or context.
 
-{examples_text}
+    Your goal:
+    - Focus entirely on the provided documents and do not speculate or answer beyond their context.
+    - Format responses in proper markdown style using the specified rules.
+    - Adapt to the question type while maintaining professionalism and relevance.
+    - Use details and examples directly from the context information.
 
-{rules_text}
+    {rules_text}
 
-Remember:
-- Keep the response focused and relevant to SAP Finance
-- Use consistent formatting throughout
-- Match the example style closest to the question type
-- Include specific details from the context
-- Maintain professional tone while adapting to question style
+    ### Response Rules:
+    - Do not answer questions unrelated to the provided documents.
+    - Use consistent formatting and style as demonstrated in the examples below.
+    - Always cite the context information to support your answers.
+    - Maintain a professional tone tailored to the question type.
+    - Be very concise and precise in your response. Do not include unnecessary information.
+    - If the user asks question about the capabilities of the model then do provide information.
 
-Context Information:
-{{context}}
+    ### Example Responses:
+    {examples_text}
 
-Question: {{question}}
+    ### Provided Context Information:
+    {{context}}
 
-Answer:"""
+    ### Question:
+    {{question}}
+
+    ### Answer:
+    """
+
 
         return prompt_template
 
@@ -294,7 +397,11 @@ Answer:"""
     ) -> RAGResponse:
         """Generate a response using the RAG pipeline"""
         try:
-            pre_processed = self.pre_processor.process_query(query, context)
+            # Truncate query if needed
+            truncated_query = self.token_manager.truncate_text(query, 50)  # max 50 tokens for query
+
+            pre_processed = self.pre_processor.process_query(truncated_query, context)
+            
             logger.info(f"Query processed: {pre_processed.improved_query}")
 
             chain_of_thought = {
@@ -312,6 +419,15 @@ Answer:"""
                 docs = self.compression_retriever.get_relevant_documents(sub_query)
                 retrieved_docs.extend(docs)
 
+            if not retrieved_docs:
+                return RAGResponse(
+                    answer="I cannot answer this question as it is outside the scope of the provided documents.",
+                    sources=[],
+                    metadata={"reason": "No relevant documents retrieved"},
+                    query_analysis={"original_query": query},
+                    chain_of_thought={"reasoning": "Out-of-scope query detected"}
+                )
+
             converted_docs = self._convert_to_retrieved_documents(retrieved_docs)
             post_processed = self.post_processor.process_documents(
                 pre_processed.improved_query,
@@ -324,23 +440,44 @@ Answer:"""
                 "reasoning": "Documents ranked by relevance and technical content"
             }
 
-            context_text = "\n".join([
-                doc.content for doc in post_processed.reranked_documents[:5]
-            ])
-
+            context_text = self._prepare_context(post_processed.reranked_documents)
+            
+            # Add token usage to metadata
+            query_tokens = self.token_manager.count_tokens(truncated_query)
+            context_tokens = self.token_manager.count_tokens(context_text)
+            
             # Create and run the QA chain
             qa_chain = LLMChain(
                 llm=self.llm,
                 prompt=self.qa_prompt,
                 verbose=True
-            )
+                )
+
             qa_response = qa_chain.run({
-                "context": context_text,
-                "question": query
+            "context": context_text,
+            "question": truncated_query
             }).strip()
 
+            # Update metadata with token usage
+            metadata = {
+                "num_retrieved": len(retrieved_docs),
+                "num_reranked": len(post_processed.reranked_documents),
+                "processing_steps": [
+                    "pre_processing",
+                    "multi_query_retrieval",
+                    "post_processing",
+                    "reranking"
+                ],
+                "token_usage": {
+                    "input_query_tokens": query_tokens,
+                    "input_context_tokens": context_tokens,
+                    "total_input_tokens": query_tokens + context_tokens,
+                    "max_output_tokens": self.max_output_tokens
+                }
+            }
+
             formatted_answer = self._format_answer(qa_response)
-            formatted_sources = self._format_sources(post_processed.reranked_documents[:3])
+            formatted_sources = self._format_sources(post_processed.reranked_documents[:5])
 
             chain_of_thought["response_generation"] = {
                 "reasoning_steps": [
@@ -350,17 +487,6 @@ Answer:"""
                     "Response synthesis"
                 ],
                 "context_usage": "Combined relevant technical details from multiple documents"
-            }
-
-            metadata = {
-                "num_retrieved": len(retrieved_docs),
-                "num_reranked": len(post_processed.reranked_documents),
-                "processing_steps": [
-                    "pre_processing",
-                    "multi_query_retrieval",
-                    "post_processing",
-                    "reranking"
-                ]
             }
 
             query_analysis = {
@@ -382,15 +508,24 @@ Answer:"""
             logger.error(f"Error generating response: {str(e)}")
             raise
 
+    def _prepare_context(self, documents: List[RetrievedDocument]) -> str:
+        """Prepare and truncate context to fit within token limits"""
+        combined_context = "\n".join([doc.content for doc in documents[:5]])
+        return self.token_manager.truncate_text(combined_context, self.max_input_tokens - 50)  # Reserve 50 tokens for query
+    
+# -------------------- Main Execution --------------------
+
 if __name__ == "__main__":
     config = load_config()
     set_environment_variables(config)
     rag = RAGPipeline(
-        dataset_path=config['deeplake']['dataset_path'],
         huggingface_token=config['huggingface']['token']
     )
-
-    query = "Who won the world cup last year?"
-    response = rag.generate_response(query)
-    print("\nAnswer:", response.answer)
-    print("\nSources:", response.sources)
+    try:
+        query = "Who won the world cup last year?"
+        response = rag.generate_response(query)
+        print("\nAnswer:", response.answer)
+        print("\nSources:", response.sources)
+    finally:
+        rag.cleanup()  # Ensures cleanup is called even if an error occurs
+        rag = None  # Remove the reference to trigger garbage collection

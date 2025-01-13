@@ -1,0 +1,3018 @@
+{
+  "sections": [
+    {
+      "title": "Page 1",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 1 Saudi Arabian Airlines FUNDS MANAGEMENT FI_05 USER TRAINING MANUAL 2008 Version : 01",
+      "metadata": {
+        "title": "Page 1",
+        "level": 1,
+        "path": "Page 1",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 1
+      },
+      "keywords": [
+        "version 01",
+        "version",
+        "fi_05",
+        "funds",
+        "funds management",
+        "management",
+        "01",
+        "saudi",
+        "manual 2008",
+        "manual"
+      ]
+    },
+    {
+      "title": "Page 2",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 2 Table of Contents Table of C ontents.............................................................................................2 Course Intr oduction..........................................................................................3 Curriculu m .......................................................................................................4 Pre Requisite Traini ng...........................................................................4 Finance Course Curriculu m...................................................................4 Business Impact...............................................................................................5 Key Impac ts ..........................................................................................5 Glossary................................................................................................5 Practical Component........................................................................................6 Exercise 1: Create Commitment item....................................................7 Exercise 2: Change Commitment item................................................11 Exercise 3: Create Co mmitment item Group.......................................14 Exercise 4: Creat e Funds C enter ........................................................18 Exercise 5: Change Funds C enter ......................................................23 Exercise 6: Create F unds Center Group .............................................27 Exercise 7: Create F und......................................................................30 Exercise 8: Change F und....................................................................34 Exercise 9: Creat e Funded Pr ogram ...................................................37 Exercise 10: C hange Funded Pr ogram ...............................................41 Exercise 11: Deri vation Ru les .............................................................45 Exercise 12: Opening Periods Pr ocess...............................................48 Exercise 13: B udget Trans fer..............................................................50 Funds Management Transac tion proce ssing .................................................55 Exercise 1: Upload ing approved budget .............................................56 Exercise 2: Budget Return - Hold ........................................................60 Exercise 3: Budget Re turn – Pr e-post.................................................63 Exercise 4: Budget Return - Post........................................................65 Exercise 5: B udget Suppl ement..........................................................67 Budget Pla nning.............................................................................................71 Exercise 1: B udget Planni ng ...............................................................72 Exercise 2: Budget Ru n ......................................................................73 Exercise 3: Budgeting Planning Pr ocess ............................................76 Exercise 4: Budget Overall Re port ......................................................81 Exercise 5: Copying from one version to anot her................................84 Exercise 6: Generating budget Data into the Final Version.................88 Exercise 7: Freeze Budget Vers ion.....................................................93",
+      "metadata": {
+        "title": "Page 2",
+        "level": 1,
+        "path": "Page 2",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 2
+      },
+      "keywords": [
+        "exercise",
+        "budget",
+        "pr",
+        "exercise budget",
+        "exercise create",
+        "create",
+        "funds",
+        "change",
+        "udget",
+        "version"
+      ]
+    },
+    {
+      "title": "Page 3",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 3 Course Introduction The Funds Management course will focu s on the process of committing and managing a budget within the S audi Airlines budget groups. Funds management is the Accounti ng term for apportioning funds across budget items. This process is referred to as Funds Commitment. In SAP this process is managed using commitment items. This course will teach you the user how to create, change and report on funding items.",
+      "metadata": {
+        "title": "Page 3",
+        "level": 1,
+        "path": "Page 3",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 3
+      },
+      "keywords": [
+        "funds",
+        "budget",
+        "course",
+        "funds management",
+        "items",
+        "management",
+        "process",
+        "commitment",
+        "managed",
+        "items course"
+      ]
+    },
+    {
+      "title": "Page 4",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 4 Curriculum Pre Requisite Training Finance Course Curriculum FI_01 GL Accounting FI_02 Accounts Payable FI_03 Accounts Receivable FI_04 Fixed Assets FI_05 Funds Management FI_06 Bank Accounting FI_07 FI Executive & Management Course Content SAP 01 Sap Basics and Sap Navigation Training",
+      "metadata": {
+        "title": "Page 4",
+        "level": 1,
+        "path": "Page 4",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 4
+      },
+      "keywords": [
+        "sap",
+        "management",
+        "training",
+        "accounting",
+        "accounts",
+        "course",
+        "curriculum",
+        "fi_05",
+        "fi_05 funds",
+        "funds"
+      ]
+    },
+    {
+      "title": "Page 5",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 5 Business Impact Key Impacts Business Process Impact Funds Commitments This process was previously known as Budgeting, and this fell into Treasury management. In compliance with GAAP accounting standards, SAP has evolved their treasury management module in accordance. As such, the Funds Management SAP module will affect how Saudi disperse s budgets across business, as well as how these budget s are managed, monitored and reported on. Glossary Terminology Arabic Meaning SAP Software being used for business processes : System Application Products Parking Capturing /introducing a Journal, Invoice, Credit notes into the SAP system Posting Approval of Accounting Documents Cash Journal Petty Cash Post Go Live Support Process: Any queries should be logged with the Saudi Airlines Help Desk Please dial 4000",
+      "metadata": {
+        "title": "Page 5",
+        "level": 1,
+        "path": "Page 5",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 5
+      },
+      "keywords": [
+        "business",
+        "sap",
+        "management",
+        "process",
+        "funds",
+        "treasury management",
+        "module",
+        "cash",
+        "funds management",
+        "impact"
+      ]
+    },
+    {
+      "title": "Page 6",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 6 Practical Component The following section will focus on exer cises that will learn how to apply the SAP Funds Management Accounting tools to your role. There are a series of exercises rela ting to Business Scenarios, with detailed instructions and notes. If at anytime you have any questions, pl ease feel free to stop the Trainer and ask questions.",
+      "metadata": {
+        "title": "Page 6",
+        "level": 1,
+        "path": "Page 6",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 6
+      },
+      "keywords": [
+        "funds",
+        "funds management",
+        "questions",
+        "management",
+        "sap",
+        "notes",
+        "learn",
+        "learn apply",
+        "management accounting",
+        "management version"
+      ]
+    },
+    {
+      "title": "Page 7",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 7 Exercise 1: Create Commitment item A commitment item master record is r equired on SAP R/3 to allow the flow of transactional data from Financial Acc ounting module to Funds Management module. A commitment item corresponds to a GL account in the chart of accounts. A commitment item must be created first bef ore a GL account is created as this is a required field in the GL master record. The commitment item will adopt the same number as the corresponding G/L account in the chart of accounts. The following prerequisites are applicabl e when processing this transaction: Check commitment item does not already exist A G/L account application form must be obtained by requesters and approved by finance managers of the different business units. All required information must be comp leted on application form by the G/L Account requestor. The form must be submitted to B udget Office for authorization",
+      "metadata": {
+        "title": "Page 7",
+        "level": 1,
+        "path": "Page 7",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 7
+      },
+      "keywords": [
+        "commitment item",
+        "item",
+        "commitment",
+        "account",
+        "gl",
+        "form",
+        "record",
+        "master",
+        "chart",
+        "chart accounts"
+      ]
+    },
+    {
+      "title": "Page 7",
+      "level": 1,
+      "content": ". All required information must be comp leted on application form by the G/L Account requestor. The form must be submitted to B udget Office for authorization. The commitment item must be created firs t before the GL A ccount is created To access the FMCIA transaction, follo w the Menu Path below, from the SAP Easy Access Screen: Accounting ÆFinancial accounting ÆPublic Sector Management Æ Funds Management ÆMaster Data ÆCommitment Item ÆIndividual Processing ÆCreate",
+      "metadata": {
+        "title": "Page 7",
+        "level": 1,
+        "path": "Page 7",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 7
+      },
+      "keywords": [
+        "management",
+        "item",
+        "created",
+        "form",
+        "submitted",
+        "required",
+        "application",
+        "application form",
+        "commitment",
+        "commitment item"
+      ]
+    },
+    {
+      "title": "Page 8",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 8 System Work Steps On the screen Create Commitment Item, ent er information as specified in the fields as specified in the table below: Field Name Description Commitment item Enter the name of a commitment item to be created e.g. 502XXXX. This is an alphanumeric code of the commitment item you are creating",
+      "metadata": {
+        "title": "Page 8",
+        "level": 1,
+        "path": "Page 8",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 8
+      },
+      "keywords": [
+        "item",
+        "commitment",
+        "commitment item",
+        "specified",
+        "steps",
+        "fields specified",
+        "funds",
+        "funds management",
+        "information",
+        "information specified"
+      ]
+    },
+    {
+      "title": "Page 9",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 9 On screen Edit Commitment Item, click on and enter information in the fields as specified on the next page: Field Name Description Name The short name of the commitment item you are creating Description The full description of the commitment item you are creating Dir. Postable Select dir.postable if you can post directly to this commitment item Financial Transaction The financial category it falls under Commitment item category The category in which it falls under whether balance sheet or income category Authorization group Enter the authoriz ation group for the creation of authoriz ation profiles – Freely definable Note: The alternative hierarchy tab will not be used and t herefore it will not be populated.",
+      "metadata": {
+        "title": "Page 9",
+        "level": 1,
+        "path": "Page 9",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 9
+      },
+      "keywords": [
+        "item",
+        "commitment",
+        "commitment item",
+        "category",
+        "description",
+        "postable",
+        "authoriz",
+        "authoriz ation",
+        "category falls",
+        "creating"
+      ]
+    },
+    {
+      "title": "Page 10",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 10 Click to save the commitm ent item and will show \" Create Commitment item\" screen as shown on the next screen shot: Result The system will display a message indicating that Commitment item has been saved successfully on the Status Bar. Once the commi tment item has been saved, it needs to be entered in the deriv ation rules before it can be used if the type Derivation Step is being used. Click until you return to the SAP R/3 screen.",
+      "metadata": {
+        "title": "Page 10",
+        "level": 1,
+        "path": "Page 10",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 10
+      },
+      "keywords": [
+        "item",
+        "screen",
+        "used",
+        "click",
+        "commitment",
+        "saved",
+        "commitment item",
+        "item saved",
+        "result display",
+        "needs entered"
+      ]
+    },
+    {
+      "title": "Page 11",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 11 Exercise 2: Change Commitment item This process of changing a commitment it em is triggered by a change in the attributes of the GL account. Once the commitment item has transactions, some attributes such as whether you can post directly to that commitment item or not cannot be changed as we ll as the financial transaction. A commitment item corresponds to a GL ac count in the chart of accounts. In order for the commitment item to be created, a co rresponding general ledger account must exist in the chart of accounts",
+      "metadata": {
+        "title": "Page 11",
+        "level": 1,
+        "path": "Page 11",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 11
+      },
+      "keywords": [
+        "commitment",
+        "commitment item",
+        "item",
+        "account",
+        "accounts",
+        "change",
+        "chart",
+        "chart accounts",
+        "gl",
+        "changed"
+      ]
+    },
+    {
+      "title": "Page 11",
+      "level": 1,
+      "content": ". A commitment item corresponds to a GL ac count in the chart of accounts. In order for the commitment item to be created, a co rresponding general ledger account must exist in the chart of accounts. Prerequisites The following prerequisites are applicabl e when processing this transaction: A G/L account change request form mu st be obtained and completed by the different business units before it is submitted to Budget Office for authorization All change request form must be comple ted by the G/L account requestor Check that the commitment item does not have transactions posted against it as some fields cannot be changed if it has been posted to To access the FMCIA transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Financial accounting Æ Public Sector Management Æ Funds Management ÆMaster Data Æ Commitment Item ÆCreate",
+      "metadata": {
+        "title": "Page 11",
+        "level": 1,
+        "path": "Page 11",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 11
+      },
+      "keywords": [
+        "commitment item",
+        "item",
+        "commitment",
+        "account",
+        "prerequisites",
+        "change request",
+        "accounts",
+        "change",
+        "chart",
+        "chart accounts"
+      ]
+    },
+    {
+      "title": "Page 12",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 12 System Work Steps 1. On screen \" Change Commitment Item \", enter the commitment item number in the field commitment item and click on the (change) icon and enter the information which needs to be changed Field Name Description Commitment item Enter the name of a commitment item to be changed e.g. 502XXXX. This is a numeric code of the commitment item you are changing",
+      "metadata": {
+        "title": "Page 12",
+        "level": 1,
+        "path": "Page 12",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 12
+      },
+      "keywords": [
+        "item",
+        "commitment",
+        "commitment item",
+        "enter",
+        "change",
+        "changed",
+        "item enter",
+        "enter commitment",
+        "field",
+        "information needs"
+      ]
+    },
+    {
+      "title": "Page 13",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 13 Field Name Description FM Area Defaults to FM area 1000 1000 – Core Administration Commitment item Click on \"search\" to select or enter the Commitment item code to be changed. Note what is displayed is the commitment item view only. Make the necessary changes to the master record. Click on \" save icon\" to save the changes of the commitment item Result The commitment item has been saved successfully To exit the \" Change Commitment Item \" screen click \"Exit Icon\".",
+      "metadata": {
+        "title": "Page 13",
+        "level": 1,
+        "path": "Page 13",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 13
+      },
+      "keywords": [
+        "commitment",
+        "commitment item",
+        "item",
+        "click",
+        "save",
+        "fm area",
+        "area",
+        "changes",
+        "exit",
+        "fm"
+      ]
+    },
+    {
+      "title": "Page 14",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 14 Exercise 3: Create Commitment item Group This process is triggered by the need to report on a number of Commitment items Commitment item groups are us ed to summarize commitment item groups that have the same characteri stics e.g. for editing purposes or reporting purposes. The commitment it em group is created in the same manner as the normal commitment items. The term, commitm ent item group is also the name of a node in hi erarchically structured groups. Prerequisites The following prerequisites are applicabl e when processing this transaction: Check if the commitment item group does not already exist To access the FMMEASURE transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting ÆFinancial accounting ÆPublic Sector Management Æ Funds Management ÆMaster Data ÆCommitment Item Commitment item group ÆCreate",
+      "metadata": {
+        "title": "Page 14",
+        "level": 1,
+        "path": "Page 14",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 14
+      },
+      "keywords": [
+        "commitment",
+        "item",
+        "commitment item",
+        "group",
+        "item group",
+        "groups",
+        "management",
+        "accounting",
+        "commitment items",
+        "funds"
+      ]
+    },
+    {
+      "title": "Page 15",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 15 Field Description FM Area Enter value \"1000\" if it does not default Commitment Item Group e.g. Saudi Crew Expenses Press Enter to proceed to the next screen For training purposes we will create any hierarchy so that we master the concept of creating hierar chies in SAP. After the completion of this training users must be able to create any FM hierarchy in the system for reporting purposes and can be adjusted at any time to suit the reports requirements.",
+      "metadata": {
+        "title": "Page 15",
+        "level": 1,
+        "path": "Page 15",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 15
+      },
+      "keywords": [
+        "training",
+        "purposes",
+        "create",
+        "enter",
+        "fm",
+        "hierarchy",
+        "hierar chies",
+        "hierarchy master",
+        "hierarchy reporting",
+        "item"
+      ]
+    },
+    {
+      "title": "Page 16",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 16 Highlight Saudi crew node and select the lower level node and insert the nodes that are at the same level as s hown above and if there are lower levels, select the Lower level tab until you have created an acceptable hierarchy and then you can assign t he lower most level which are the commitment items. Field Name Description MOA Enter the funds center group code to be created (Same with the cost center group and profit center group)e.g. Airlines Crew expenses Acc Enter the full description of the code e.g. accommodation Food Enter the full description of the code e.g. Food At this level select the Commitment items tab which is the lowest level which is equivalent to the current level of LX",
+      "metadata": {
+        "title": "Page 16",
+        "level": 1,
+        "path": "Page 16",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 16
+      },
+      "keywords": [
+        "level",
+        "lower",
+        "enter",
+        "group",
+        "center group",
+        "code",
+        "description",
+        "center",
+        "lower level",
+        "select"
+      ]
+    },
+    {
+      "title": "Page 17",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 17 Select the commitment item s as a range if they are in sequential order or as individuals as shown above. When done click on Save to save your changes and the message \" The Changes have been saved \" Click on to save the funds center that has been created. Click until you return to the SAP R/3 screen",
+      "metadata": {
+        "title": "Page 17",
+        "level": 1,
+        "path": "Page 17",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 17
+      },
+      "keywords": [
+        "click",
+        "save",
+        "changes",
+        "click save",
+        "funds",
+        "select",
+        "range sequential",
+        "order",
+        "order individuals",
+        "range"
+      ]
+    },
+    {
+      "title": "Page 18",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 18 Exercise 4: Create Funds Center Funds Centers represent an organiza tional unit within a Financial Management area, which repr esents the structure of an organization or an area of responsibility e.g. departments or projects. Budgets are assigned to funds centers and commitment items in Funds Management. Budget is consumed as transactions are posted to f unds centers (via cost centers) with commitments and actual values. Funds Centers will be a mirror image of the Saudi cost centers and Saudi will be abl e to have budgetary control at the lowest cost centre (funds centre) le vel. Funds centers are maintained on a one to one relationship with cost centers and profit center Prerequisites: The following prerequisites are applicabl e when processing this transaction: Check funds center does not already exist A funds center application form must be obtained by requesters and approved by finance managers of the different business units",
+      "metadata": {
+        "title": "Page 18",
+        "level": 1,
+        "path": "Page 18",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 18
+      },
+      "keywords": [
+        "centers",
+        "funds",
+        "funds centers",
+        "cost centers",
+        "cost",
+        "center",
+        "management",
+        "funds center",
+        "area",
+        "prerequisites"
+      ]
+    },
+    {
+      "title": "Page 18",
+      "level": 1,
+      "content": ". All required information must be comp leted on application form by the cost center requestor. The form must be submitted to B udget Office for authorization. To access the FMSA transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Financial accounting Æ Public Sector Management Æ Funds Management ÆMaster Data Æ Funds Center ÆCreate",
+      "metadata": {
+        "title": "Page 18",
+        "level": 1,
+        "path": "Page 18",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 18
+      },
+      "keywords": [
+        "access",
+        "accounting",
+        "management",
+        "center",
+        "funds",
+        "form",
+        "cost",
+        "application",
+        "application form",
+        "transaction"
+      ]
+    },
+    {
+      "title": "Page 19",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 19 System Work Steps On the screen \" Create funds center in FM Area \", enter the funds center number in the field funds center. Field Name Description Funds Center Enter the funds center code to be created (Same with the cost center or profit center) From Fiscal Year Enter the va lidity start dat e e.g. 2006 To fiscal year Enter the validity end date e.g. 2010 FM Area Defaults to FM Area 1000 but can be changed Click on the enter icon to proceed to the next screen",
+      "metadata": {
+        "title": "Page 19",
+        "level": 1,
+        "path": "Page 19",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 19
+      },
+      "keywords": [
+        "center",
+        "funds",
+        "funds center",
+        "enter",
+        "fm area",
+        "fm",
+        "area",
+        "year",
+        "fiscal year",
+        "fiscal"
+      ]
+    },
+    {
+      "title": "Page 20",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 20 On \"Funds Center Create \" screen enter the informa tion on the table below under the Basic Data tab Field Name Description Name Enter the short name of the Funds center you are creating Description Enter the full descrip tion of the Funds center you are creating Default Fund Value Enter SV00 for the default value Company Code Enter the Company c ode to which the funds center belongs to e.g. 1100 or 1300 etc User name Enter the funds center owner's user name (logon name) Name Enter the funds center owner's full name",
+      "metadata": {
+        "title": "Page 20",
+        "level": 1,
+        "path": "Page 20",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 20
+      },
+      "keywords": [
+        "enter",
+        "funds",
+        "center",
+        "funds center",
+        "center creating",
+        "center owner",
+        "company",
+        "creating",
+        "default",
+        "description"
+      ]
+    },
+    {
+      "title": "Page 21",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 21 On the same Funds Center create screen click onto the \" Hierarchy \" tab and enter the information on the table below: Field Name Description Hierarchy Variant Defaults from the setup Note: Do not enter information in the s uperior funds center field at the time of creation but this will be populated w hen the funds center hierarchy is maintained. Note: The other remaining tabs are opt ional so they can be filled in at a later stage when the info rmation is required. In addition to the above stated information other screens allow defining information at the level of: Additional address information Long text Classification",
+      "metadata": {
+        "title": "Page 21",
+        "level": 1,
+        "path": "Page 21",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 21
+      },
+      "keywords": [
+        "information",
+        "funds",
+        "center",
+        "funds center",
+        "hierarchy",
+        "enter",
+        "enter information",
+        "field",
+        "note",
+        "required"
+      ]
+    },
+    {
+      "title": "Page 22",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 22 Address data : screen \"Create funds cent er address\" – this screen allows you to enter additional address info rmation like: title, name, street, city, district, country key, P.O box, postal code, P.O box Post Code, Region. A separate screen is provided to keep tr ack of additional communication data, such as: language, telephone 1, telephone 2, telebox, telex, fax number, teletex, and data line. Long text : screen \"Create FM: long te xt master data\" – allows you to enter a free format long text. Classification : screen \"C reate Funds Center: Char Val. Assignment\". Within the classification that you defined for the funds centers you can freely identify the characterist ic combinations within this screen. Click on to save the funds center that has been created. Click until you return to the SAP R/3 screen",
+      "metadata": {
+        "title": "Page 22",
+        "level": 1,
+        "path": "Page 22",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 22
+      },
+      "keywords": [
+        "screen",
+        "funds",
+        "data",
+        "address",
+        "long",
+        "text",
+        "click",
+        "allows",
+        "allows enter",
+        "box"
+      ]
+    },
+    {
+      "title": "Page 23",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 23 Exercise 5: Change Funds Center This process of changing a fund is tri ggered by a change in the attributes of the cost center or prof it center as they are maintained on a one to one relationship. All the attributes of a funds center can be changed except the hierarchy variant only. Prerequisites The following prerequisites are applicabl e when processing this transaction: Check if the funds center already exists A funds center change request form must be completed and approved by finance managers of the different business units. The form must be submitted to Budget Office to carry out the changes. To access the FM5U transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Financial accounting Æ Public Sector Management Æ Funds Management ÆMaster Data Æ Funds Center ÆChange",
+      "metadata": {
+        "title": "Page 23",
+        "level": 1,
+        "path": "Page 23",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 23
+      },
+      "keywords": [
+        "center",
+        "funds",
+        "funds center",
+        "management",
+        "change",
+        "funds management",
+        "accounting",
+        "attributes",
+        "form",
+        "transaction"
+      ]
+    },
+    {
+      "title": "Page 24",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 24 System Work Steps On the screen \" Change funds center in FM Area \", enter the funds center number in the field funds center Field Name Description Funds Center Enter the funds center code to be changed FM Area Defaults to FM Area 1000 but can be changed Click on the enter icon to proceed to the next screen",
+      "metadata": {
+        "title": "Page 24",
+        "level": 1,
+        "path": "Page 24",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 24
+      },
+      "keywords": [
+        "funds",
+        "center",
+        "funds center",
+        "area",
+        "fm area",
+        "fm",
+        "enter",
+        "screen",
+        "enter funds",
+        "changed"
+      ]
+    },
+    {
+      "title": "Page 25",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 25 On the \" Funds Center Change \" screen make all the necessary changes. Only fields that are white can be changed The editable fields of the funds center are displayed as opened up (white in color) for editing Save changes made to the funds center by clicking",
+      "metadata": {
+        "title": "Page 25",
+        "level": 1,
+        "path": "Page 25",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 25
+      },
+      "keywords": [
+        "funds",
+        "center",
+        "funds center",
+        "white",
+        "changes",
+        "fields",
+        "screen",
+        "fields funds",
+        "fields white",
+        "funds management"
+      ]
+    },
+    {
+      "title": "Page 26",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 26 Result The system will display a message indicating that Funds Center was successfully saved on the Status Bar",
+      "metadata": {
+        "title": "Page 26",
+        "level": 1,
+        "path": "Page 26",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 26
+      },
+      "keywords": [
+        "funds",
+        "successfully saved",
+        "successfully",
+        "fi_05",
+        "fi_05 funds",
+        "funds center",
+        "funds management",
+        "indicating",
+        "indicating funds",
+        "management"
+      ]
+    },
+    {
+      "title": "Page 27",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 27 Exercise 6: Create Funds Center Group This process is triggered by the need to report on a number of funds centers which are grouped together that have the sa me characteristics e.g. for editing purposes or reporting purposes. The term, funds centers group is also the name of a node in hierarch ically structured groups. Prerequisites The following prerequisites are applicabl e when processing this transaction: Check the funds centers group does not already exist To access the FM_SETS_FICTR1 transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Financial accounting Æ Public Sector Management Æ Funds Management ÆMaster Data Æ Funds Center group ÆCreate",
+      "metadata": {
+        "title": "Page 27",
+        "level": 1,
+        "path": "Page 27",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 27
+      },
+      "keywords": [
+        "funds",
+        "group",
+        "funds centers",
+        "centers",
+        "management",
+        "transaction",
+        "accounting",
+        "center",
+        "center group",
+        "centers group"
+      ]
+    },
+    {
+      "title": "Page 28",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 28 Highlight Saudi crew node and select the lower level node and insert the nodes that are at the same level as s hown above and if there are lower levels, select the Lower leve l tab until you have created an acceptable hierarchy and then you can assign the lo wer most level which are the Funds Centers. Field Name Description AP Enter the full description of the code e.g. Accounts Payable GL Enter the full description of the code e.g. General Ledger Dept FM Enter the full descripti on of the code e.g. Funds Management",
+      "metadata": {
+        "title": "Page 28",
+        "level": 1,
+        "path": "Page 28",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 28
+      },
+      "keywords": [
+        "funds",
+        "lower",
+        "code",
+        "description",
+        "level",
+        "enter",
+        "select lower",
+        "node",
+        "management",
+        "description code"
+      ]
+    },
+    {
+      "title": "Page 29",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 29 When you have reached the lowest level of the hierarchy select so that you can select the f unds centers that belong to that group. This can be changed until the desired result is reached and you can save your entries and exit.",
+      "metadata": {
+        "title": "Page 29",
+        "level": 1,
+        "path": "Page 29",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 29
+      },
+      "keywords": [
+        "reached",
+        "select",
+        "unds centers",
+        "hierarchy select",
+        "level",
+        "level hierarchy",
+        "lowest",
+        "lowest level",
+        "management",
+        "management version"
+      ]
+    },
+    {
+      "title": "Page 30",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 30 Exercise 7: Create Fund A fund is used to differentiate the di fferent sources of funding. All Saudi operational expenditure will be linked to a source of funding. The expenditure can be multi funded and as a result all the funding sources must be reflected accordingly. Prerequisites The following prerequisites are applicabl e when processing this transaction: Check if the fund does not already exist in the system All required information must be comp leted on application form by the budget office A fund application form must be obt ained by requesters and approved by Budget Office manager. To access the FMSA transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Financial accounting Æ Public Sector Management Æ Funds Management ÆMaster Data Æ FundÆCreate",
+      "metadata": {
+        "title": "Page 30",
+        "level": 1,
+        "path": "Page 30",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 30
+      },
+      "keywords": [
+        "fund",
+        "funding",
+        "management",
+        "accounting",
+        "application",
+        "application form",
+        "budget",
+        "budget office",
+        "expenditure",
+        "form"
+      ]
+    },
+    {
+      "title": "Page 31",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 31 System Work Steps On the screen \" Create Fund: Basic Screen \", enter information in the fields as specified in the table below: Field Name Description FM Area Defaults to FM Area 1000 Fund Enter the code for the new fund to be created Press \"enter\" to go to the next screen",
+      "metadata": {
+        "title": "Page 31",
+        "level": 1,
+        "path": "Page 31",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 31
+      },
+      "keywords": [
+        "screen",
+        "enter",
+        "fund",
+        "area",
+        "fm",
+        "fm area",
+        "screen enter",
+        "fund enter",
+        "fund basic",
+        "fund created"
+      ]
+    },
+    {
+      "title": "Page 32",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 32 On the screen \" Create Fund: Basic Screen \", enter information in the fields as specified in the table below: Field Name Description Name The short name of the fund you are creating Description The full description of the fund you are creating Valid From Enter the date from which the fund is valid from e.g. 01.01.2006 Valid To Enter the end valid ity date of this fund e.g. 15.07.2010 Authorization group Enter the author ization group for this fund for authorization purposes. Click on \" save icon\" to save the fund Result The system will display a message on the St atus Bar indicating that Fund has been saved. 2. To exit the \" Create fund: Initial Screen \" screen click \"Exit Icon\".",
+      "metadata": {
+        "title": "Page 32",
+        "level": 1,
+        "path": "Page 32",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 32
+      },
+      "keywords": [
+        "fund",
+        "enter",
+        "screen",
+        "valid",
+        "description",
+        "01",
+        "group",
+        "fund creating",
+        "icon",
+        "exit"
+      ]
+    },
+    {
+      "title": "Page 33",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 33",
+      "metadata": {
+        "title": "Page 33",
+        "level": 1,
+        "path": "Page 33",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 33
+      },
+      "keywords": [
+        "version 01",
+        "version",
+        "management version",
+        "management",
+        "funds management",
+        "funds",
+        "fi_05 funds",
+        "fi_05",
+        "33",
+        "01 33"
+      ]
+    },
+    {
+      "title": "Page 34",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 34 Exercise 8: Change Fund This process of changing a fund is tri ggered by a change in the attributes of the fund. All the attributes of a fund can be changed except the fund code only. A fund is used to differentiate the different sources of funding. Prerequisites Check if the fund does not already exist in the system A fund change request form must be obtained and completed All required information must be comp leted on application form by the budget office To access the FM5U transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Financial accounting Æ Public Sector Management Æ Funds Management ÆMaster Data Æ FundÆChange",
+      "metadata": {
+        "title": "Page 34",
+        "level": 1,
+        "path": "Page 34",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 34
+      },
+      "keywords": [
+        "fund",
+        "change",
+        "management",
+        "funds management",
+        "funds",
+        "access",
+        "accounting",
+        "attributes",
+        "attributes fund",
+        "form"
+      ]
+    },
+    {
+      "title": "Page 35",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 35 System Work Steps On the screen \" Change Fund: Basic Screen \", enter information in the fields as specified in the table below: Field Name Description FM Area Defaults to FM Area 1000 Fund Enter the code for the Fund to be changed Press \"enter\" to go to the next screen",
+      "metadata": {
+        "title": "Page 35",
+        "level": 1,
+        "path": "Page 35",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 35
+      },
+      "keywords": [
+        "screen",
+        "enter",
+        "fund",
+        "area",
+        "fm",
+        "fm area",
+        "specified",
+        "fund enter",
+        "fund basic",
+        "fund changed"
+      ]
+    },
+    {
+      "title": "Page 36",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 36 Make the necessary changes in the opened fields Click on to save your changes and go back to the \" Change Fund: Initial Screen \" To exit the \" Change fund: Initial Screen \" screen click \"Exit Icon\".",
+      "metadata": {
+        "title": "Page 36",
+        "level": 1,
+        "path": "Page 36",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 36
+      },
+      "keywords": [
+        "screen",
+        "change",
+        "initial screen",
+        "change fund",
+        "changes",
+        "click",
+        "exit",
+        "fund",
+        "fund initial",
+        "initial"
+      ]
+    },
+    {
+      "title": "Page 37",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 37 Exercise 9: Create Funded Program This process is triggered by the need to provide for integration between FM, Controlling (CO), and Proj ect System (PS) is a dimension in Funds Management (FM) that supplements FM in providing for detailed budgeting and expenditure control for lower-level programs. It allows for cross- organizational and cross-functional budgeting, control, and reporting on programs. The integration between the Projec t System (PS) and Funds Management (FM) components enables you to monito r capital expenditure against the overall project budget. This is achiev ed by assigning funded programs to work breakdown structures. For Saudi funded programs will be assigned to internal orders and will be maintained on a 1:1 basis",
+      "metadata": {
+        "title": "Page 37",
+        "level": 1,
+        "path": "Page 37",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 37
+      },
+      "keywords": [
+        "fm",
+        "programs",
+        "funds management",
+        "management",
+        "funded",
+        "funds",
+        "integration",
+        "control",
+        "cross",
+        "ps"
+      ]
+    },
+    {
+      "title": "Page 37",
+      "level": 1,
+      "content": ". This is achiev ed by assigning funded programs to work breakdown structures. For Saudi funded programs will be assigned to internal orders and will be maintained on a 1:1 basis. Prerequisites The following prerequisites are applicabl e when processing this transaction: Check if the same funded program does not already exist and a corresponding internal order exists in CO A funded program application form must be obtained by budget office All required information must be comp leted on application form by the budget office. To access the FMMEASURE transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Financial accounting Æ Public Sector Management Æ Funds Management ÆMaster DataÆ Funded Program ÆEdit",
+      "metadata": {
+        "title": "Page 37",
+        "level": 1,
+        "path": "Page 37",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 37
+      },
+      "keywords": [
+        "funded",
+        "program",
+        "funded program",
+        "budget",
+        "programs",
+        "management",
+        "internal",
+        "funded programs",
+        "funds",
+        "ed"
+      ]
+    },
+    {
+      "title": "Page 38",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 38 System Work Steps On the screen \" Maintain Funded Program \", enter the Funded Program number in the field Funded Program and click on the (create) and enter information in the fields as specified in the table below: Field Name Description Funded Program Alphanumeric code of the funded program you are creating. Financial Management Area Defaults to FM area 1000",
+      "metadata": {
+        "title": "Page 38",
+        "level": 1,
+        "path": "Page 38",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 38
+      },
+      "keywords": [
+        "program",
+        "funded",
+        "funded program",
+        "area",
+        "enter",
+        "field",
+        "management",
+        "program creating",
+        "information",
+        "funds"
+      ]
+    },
+    {
+      "title": "Page 39",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 39 On screen \" Maintain Funded Program \", click on and enter information in the fields as specified below: Field Name Description Name Enter the short name of the funded program you are creating Description Enter the full name of the funded program you are creating Valid From Enter the start date of the validity period of the funded program Valid To Enter the end date of the validity period of the funded program Authorization Group Enter the authorization group for the creation of authorization profiles – Freely definable – leave blank for now Click \"Save\" to save the funded pr ogram that has been created and the system will go back to the \" Display Funded Program \" screen as shown on the next page:",
+      "metadata": {
+        "title": "Page 39",
+        "level": 1,
+        "path": "Page 39",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 39
+      },
+      "keywords": [
+        "funded",
+        "funded program",
+        "program",
+        "enter",
+        "authorization",
+        "program creating",
+        "save",
+        "period funded",
+        "period",
+        "group"
+      ]
+    },
+    {
+      "title": "Page 40",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 40 Result The Funded Program is saved. After saving your changes the funded program the system does not issue any message. Click until you return to the SAP R/3 screen",
+      "metadata": {
+        "title": "Page 40",
+        "level": 1,
+        "path": "Page 40",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 40
+      },
+      "keywords": [
+        "funded",
+        "funded program",
+        "program",
+        "screen",
+        "saving changes",
+        "management",
+        "message",
+        "message click",
+        "program does",
+        "program saved"
+      ]
+    },
+    {
+      "title": "Page 41",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 41 Exercise 10: Chan ge Funded Program The details of an internal order have changed in CO and likewise in FM we must also update the master record. Prerequisites The following prerequisites are applicabl e when processing this transaction: A funded program change form must be obtained by budget office All required information must be comp leted on application form by the budget office. To access the FMMEASURE transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Financial accounting Æ Public Sector Management Æ Funds Management ÆMaster DataÆ Funded Program ÆEdit",
+      "metadata": {
+        "title": "Page 41",
+        "level": 1,
+        "path": "Page 41",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 41
+      },
+      "keywords": [
+        "management",
+        "program",
+        "funded",
+        "funded program",
+        "accounting",
+        "budget",
+        "budget office",
+        "form",
+        "funds",
+        "funds management"
+      ]
+    },
+    {
+      "title": "Page 42",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 42 System Work Steps On the screen \" Maintain Funded Program \", enter the Funded Program number in the field Funded Program and click on the (change) and enter information in the fields as specified in the table below: Field Name Description Funded Program Alphanumeric code of the funded pr ogram you are changing. Financial Management Area Defaults to FM area 1000 On screen Maintain Funded Program, click on \"change\" and enter information in the fields as specified on the next page:",
+      "metadata": {
+        "title": "Page 42",
+        "level": 1,
+        "path": "Page 42",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 42
+      },
+      "keywords": [
+        "funded",
+        "program",
+        "funded program",
+        "enter",
+        "fields specified",
+        "change enter",
+        "click",
+        "click change",
+        "enter information",
+        "field"
+      ]
+    },
+    {
+      "title": "Page 43",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 43 Make the necessary changes on the funded program and click on to save the changes made and the syst em will go back to the \" Display Funded Program\" screen as shown on the next page: Result The Funded Program is saved. After saving your changes the funded program the system does not issue any message.",
+      "metadata": {
+        "title": "Page 43",
+        "level": 1,
+        "path": "Page 43",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 43
+      },
+      "keywords": [
+        "funded",
+        "funded program",
+        "program",
+        "changes",
+        "changes funded",
+        "saving changes",
+        "saving",
+        "necessary changes",
+        "page",
+        "page result"
+      ]
+    },
+    {
+      "title": "Page 44",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 44 Click until you return to the SAP R/3 screen",
+      "metadata": {
+        "title": "Page 44",
+        "level": 1,
+        "path": "Page 44",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 44
+      },
+      "keywords": [
+        "version 01",
+        "funds",
+        "01 44",
+        "44",
+        "44 click",
+        "click",
+        "click return",
+        "fi_05",
+        "fi_05 funds",
+        "funds management"
+      ]
+    },
+    {
+      "title": "Page 45",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 45 Exercise 11: Derivation Rules This process is triggered by the need to integrate Funds Management with all other relevant modules. FM uses mainly controlling master data objects e.g. cost center to determine the FM objects i.e. funds center. At the time of posting, FM must be able to derive t he corresponding objec ts from other modules hence the need to maintain these rules. Different types of derivation step types exist in the system that you can setup depending on certain scenarios. When defining deriv ation rules you must define a source field and target field(s)",
+      "metadata": {
+        "title": "Page 45",
+        "level": 1,
+        "path": "Page 45",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 45
+      },
+      "keywords": [
+        "fm",
+        "funds",
+        "rules",
+        "management",
+        "derivation",
+        "field",
+        "funds management",
+        "types",
+        "modules",
+        "scenarios"
+      ]
+    },
+    {
+      "title": "Page 45",
+      "level": 1,
+      "content": ". Different types of derivation step types exist in the system that you can setup depending on certain scenarios. When defining deriv ation rules you must define a source field and target field(s). The following prerequisites are applicabl e when processing this transaction: All the relevant master data has been created in the feeder modules The derivation step types have been defined in FM To access the FMDERIVER transaction, follow the M enu Path below, from the SAP Easy Access Screen: Accounting Æ Public Sector Management Æ Funds management Æ Budgeting ÆBudget Control SystemÆMaster DataÆAssignments Æ Fmderiver",
+      "metadata": {
+        "title": "Page 45",
+        "level": 1,
+        "path": "Page 45",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 45
+      },
+      "keywords": [
+        "types",
+        "derivation step",
+        "step",
+        "management",
+        "derivation",
+        "step types",
+        "field",
+        "defining",
+        "defining deriv",
+        "depending"
+      ]
+    },
+    {
+      "title": "Page 46",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 46 System Work Steps On screen \" Derivation Strategy for FM Object Assignment: Maintain Values \", select the derivation rule to be maintained as shown below: Click on or double click on the derivation rule to move to \"Derivation Strategy for FM Object Assignment: Change Rule Values \", and enter information as in the fields as specified in the table below:",
+      "metadata": {
+        "title": "Page 46",
+        "level": 1,
+        "path": "Page 46",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 46
+      },
+      "keywords": [
+        "derivation",
+        "rule",
+        "values",
+        "object",
+        "assignment",
+        "click",
+        "derivation rule",
+        "derivation strategy",
+        "fm",
+        "fm object"
+      ]
+    },
+    {
+      "title": "Page 47",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 47 NOTE: The column layout is dependent on the derivation rule source fields and target fields, so the rule value screens are not always the same!!! Field Name Description Order Number Enter the wo rk order number e.g. 34000 Funded Program Enter the funded program number e.g. 34000 Fund Enter the work or der number i.e. SV00 In cases where the rule already exists , and only requires a change, highlight the row where an object is to be added by clicking on to create an empty line where an object can be assigned to a corresponding object Click to save the rule values entered. Result The system will display a message indicati ng that the rule values have been Saved on the Status Bar. They system can now automatically derive the FM commitment item when transactions are posted against the respective cost element. Click to return to the \" Derivation Strategy for FM Object Assignment: Change Rule Values \" or SAP R/3 screen",
+      "metadata": {
+        "title": "Page 47",
+        "level": 1,
+        "path": "Page 47",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 47
+      },
+      "keywords": [
+        "rule",
+        "number",
+        "object",
+        "enter",
+        "rule values",
+        "values",
+        "order",
+        "order number",
+        "number 34000",
+        "program"
+      ]
+    },
+    {
+      "title": "Page 48",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 48 Exercise 12: Opening Periods Process This is the process of allowing the budget ing process to be carried for all periods or to certain periods. This proc ess is necessary before the start of the budget preparation so that users will not capture t heir proposed budget in the wrong fiscal year or period. This process is used when the busi ness wants to control the budgeting periods Prerequisites: The budget versions have been created already in the system To access the FMOPER transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting → Financial Accounting → Public Sector Management → Funds Management – Additional Functions → Closing Operations → Open and Close Periods/Fiscal Years → Individual Processing Highlight the version you w ant to open the periods for and then in the From To fields enter the periods that are to be opened per version",
+      "metadata": {
+        "title": "Page 48",
+        "level": 1,
+        "path": "Page 48",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 48
+      },
+      "keywords": [
+        "periods",
+        "process",
+        "budget",
+        "management",
+        "version",
+        "open",
+        "funds management",
+        "funds",
+        "fiscal",
+        "accounting"
+      ]
+    },
+    {
+      "title": "Page 49",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 49 Double click on any version to control the periods per Fund as shown below using the From and To columns Save your entries and exit the screen.",
+      "metadata": {
+        "title": "Page 49",
+        "level": 1,
+        "path": "Page 49",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 49
+      },
+      "keywords": [
+        "version",
+        "using columns",
+        "01 49",
+        "fi_05",
+        "fi_05 funds",
+        "fund",
+        "fund shown",
+        "funds",
+        "funds management",
+        "management"
+      ]
+    },
+    {
+      "title": "Page 50",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 50 Exercise 13: Budget Transfer Funds Center Managers (Cost Center H ead) are allowed to re-allocate budget under certain conditions. If changes are outside the aforementi oned criteria or additional budget is required, the r equest will be referred to the GM. The Budget Office will check the author ity before it is applied. The budget transfer will be on a combinat ion of a funds, funds centers, commitment items for operating budget and a combination of funds, funds center, commitment items and funded progra ms for Capital expenses. This process is triggered by the need to s pend but when there are insufficient funds in an account, hence a request is made to transfer funds from one account assignment to another. A trans fer can be done manually or by an upload depending on the number of line items to be transferred",
+      "metadata": {
+        "title": "Page 50",
+        "level": 1,
+        "path": "Page 50",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 50
+      },
+      "keywords": [
+        "funds",
+        "budget",
+        "center",
+        "transfer",
+        "items",
+        "budget transfer",
+        "commitment items",
+        "account",
+        "funds management",
+        "fer manually"
+      ]
+    },
+    {
+      "title": "Page 50",
+      "level": 1,
+      "content": ". A trans fer can be done manually or by an upload depending on the number of line items to be transferred. The following prerequisites are applicabl e when processing this transaction: Check that all the required master data already exist Check if sender account assignment has sufficient funds to transfer to the receiver account assignments To access the FMBBC transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Public Sector Management Æ Funds management Æ Budgeting Æ Budget Control System ÆEntry Documents ÆCreate",
+      "metadata": {
+        "title": "Page 50",
+        "level": 1,
+        "path": "Page 50",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 50
+      },
+      "keywords": [
+        "account",
+        "management",
+        "check",
+        "funds",
+        "required",
+        "assignment",
+        "budget",
+        "depending",
+        "depending number",
+        "transfer"
+      ]
+    },
+    {
+      "title": "Page 51",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 51 System Work Steps On the screen \" Budgeting workbench – Create document \", enter the information in the fields as specified in the table below: Field Name Description Header Data Process Select the process that you want to perform i.e. \"Transfer\" Budget Category Defaults to \"Payment\" Version Enter version 0 for approved budget Document Type Select document type \"budget transfer\" (ZT) Document Date Defaults to today's date Sender Fiscal year Normally defaults to the current year Budget Type Budget type correspond to the process you are carrying out i.e. \"TRF\" Period Select the budgeting peri od from which you want to make the transfer Fund Enter the source of funding e.g. SV00 - Saudi Budget Receiver Fiscal year Normally defaults to the current year",
+      "metadata": {
+        "title": "Page 51",
+        "level": 1,
+        "path": "Page 51",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 51
+      },
+      "keywords": [
+        "budget",
+        "defaults",
+        "document",
+        "year",
+        "type",
+        "select",
+        "process",
+        "enter",
+        "transfer",
+        "version"
+      ]
+    },
+    {
+      "title": "Page 52",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 52 Field Name Description Header Data Budget Type Budget type correspond to the process you are carrying out i.e. \"TRF\" Period Select the budgeting peri od in which you want to make the transfer e.g. January",
+      "metadata": {
+        "title": "Page 52",
+        "level": 1,
+        "path": "Page 52",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 52
+      },
+      "keywords": [
+        "type",
+        "budget",
+        "budget type",
+        "type budget",
+        "management",
+        "management version",
+        "od",
+        "od want",
+        "peri",
+        "peri od"
+      ]
+    },
+    {
+      "title": "Page 53",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 53 Click on the check button to check for any e rrors as shown above. Click to post the transfer and move to display \" Budgeting Workbench – Display Document \" screen as shown below Field Name Lines Description -/+ Select (-) for the sender commitment item Funds center Enter the Funds center item transferring the budget e.g. 11735130 Commitment item Enter the Commitment item transferring the budget e.g. 50261XX Amount Enter the amount to be transferred Text Enter any explanatory notes if any -/+ Select (+) for the receiver commitment item Funds Center Enter the Funds center item receiving the budget e.g. 11111130 Commitment item Enter the Commitment item receiving the budget e.g. 50261XX Amount Enter the amount to be transferred Text Enter any explanatory notes if any -/+ Select (+) for the receiver commitment item Funds Center Enter the Funds center item receiving the budget e.g",
+      "metadata": {
+        "title": "Page 53",
+        "level": 1,
+        "path": "Page 53",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 53
+      },
+      "keywords": [
+        "item",
+        "funds",
+        "enter",
+        "center",
+        "funds center",
+        "commitment",
+        "commitment item",
+        "budget",
+        "center enter",
+        "center item"
+      ]
+    },
+    {
+      "title": "Page 53",
+      "level": 1,
+      "content": ". 11111131 Commitment item Enter the Commitment item receiving the budget e.g. 50261XX Amount Enter the amount to be transferred Text Enter any explanatory notes if any",
+      "metadata": {
+        "title": "Page 53",
+        "level": 1,
+        "path": "Page 53",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 53
+      },
+      "keywords": [
+        "enter",
+        "item",
+        "commitment item",
+        "commitment",
+        "budget",
+        "receiving",
+        "notes",
+        "item receiving",
+        "explanatory notes",
+        "explanatory"
+      ]
+    },
+    {
+      "title": "Page 54",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 54 Result The system will display a message indi cating that document 4xxxxxxxxx has been created successfully in FM ar ea XXXX and fiscal year XXXX. Note: The field funded pr ogram will only be used if it is a capital project and therefore it will not be populated if it is Operating Expenditure. Note: The budgeting work bench can onl y take up to 999999 line items. 3. Click until you return to the SAP R/3 screen",
+      "metadata": {
+        "title": "Page 54",
+        "level": 1,
+        "path": "Page 54",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 54
+      },
+      "keywords": [
+        "xxxx",
+        "note",
+        "populated operating",
+        "items click",
+        "line",
+        "line items",
+        "management",
+        "management version",
+        "message",
+        "message indi"
+      ]
+    },
+    {
+      "title": "Page 55",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 55 Funds Management Transaction processing All the transactions in the budgeti ng module can go through stages of approval i.e. holding a document, repos ting and then actual posting of the document or documents. The processe s that can make use of this functionality are budget upload, return, transfer and supplement. User Note 1: Hold Functionality This functionality is available for te mporarily holding the budget document by clicking on the pushbutton \"Hol d\" so that the user c an process it later. The held budget document number ranges are exte rnally assigned, and it is stored temporarily in a work center and not in the database. Held documents can only be processed by the respective user/w ork center. In cont rast to all other processing statuses, you can delet e held budget return documents. Temporarily stored budgets c an still be consumed despite their held status. At this stage the budget is not reduced",
+      "metadata": {
+        "title": "Page 55",
+        "level": 1,
+        "path": "Page 55",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 55
+      },
+      "keywords": [
+        "held",
+        "documents",
+        "budget",
+        "document",
+        "functionality",
+        "user",
+        "temporarily",
+        "stored",
+        "budget document",
+        "user note"
+      ]
+    },
+    {
+      "title": "Page 55",
+      "level": 1,
+      "content": ". Temporarily stored budgets c an still be consumed despite their held status. At this stage the budget is not reduced. User Note 2: Pre-post Functionality This functionality is available as a control measure for budget entry without workflow connection. The user who pre-posts the budget document will not have authorization to post it. By pre ssing the Pre-post pushbutton means the user will park the document as he will not have the authorization to directly post it and the system wil l internally assign t he document number. The business unit posting the budget trans action will have its overall budget affected by the amount in the budget document. User Note 3: Posting Only a person with the authorization to post or approve the pre-posted document will then post it into SAP. Office rs in the Budget Office only must be allowed to post directly any budgeting transactions without parking it",
+      "metadata": {
+        "title": "Page 55",
+        "level": 1,
+        "path": "Page 55",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 55
+      },
+      "keywords": [
+        "post",
+        "budget",
+        "pre",
+        "authorization",
+        "document",
+        "user",
+        "budget document",
+        "directly",
+        "functionality",
+        "user note"
+      ]
+    },
+    {
+      "title": "Page 55",
+      "level": 1,
+      "content": ". Office rs in the Budget Office only must be allowed to post directly any budgeting transactions without parking it. From the budgeting workbench the user c an select the document to be posted after checking it for any e rrors. When the document is finally posted it retains its number from the pre- posting transaction stage.",
+      "metadata": {
+        "title": "Page 55",
+        "level": 1,
+        "path": "Page 55",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 55
+      },
+      "keywords": [
+        "office",
+        "budgeting",
+        "document",
+        "pre",
+        "post",
+        "directly",
+        "transactions",
+        "budget",
+        "stage",
+        "posting"
+      ]
+    },
+    {
+      "title": "Page 56",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 56 Exercise 1: Uploadi ng approved budget This process is triggered once the S audi has approved the budget or a new budget proposal has been established, the figures need to be captured into the system. The approved budget will be loaded as version 0 into the SAP system. Budget checking will be against this version. Many versions can be captured into the SAP system in the same manner as the actual version 0. The approved budget will be loaded against a combination of a fund, funds centers, commitment item s for operating budget and a combination of fund, funds center, commitment items and funded programs. The following prerequisites are applicable when processing this transaction: Check that all the required co mmitment items already exist A test run must be done befor e carrying out the live run The upload file must be authorized or signed by the budget office",
+      "metadata": {
+        "title": "Page 56",
+        "level": 1,
+        "path": "Page 56",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 56
+      },
+      "keywords": [
+        "budget",
+        "version",
+        "approved",
+        "approved budget",
+        "funds",
+        "commitment",
+        "budget loaded",
+        "captured",
+        "combination",
+        "combination fund"
+      ]
+    },
+    {
+      "title": "Page 56",
+      "level": 1,
+      "content": ". To access the FMBBC transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Public Sector Management Æ Funds management Æ Budgeting Æ Budget Control System ÆEntry Documents ÆCreate",
+      "metadata": {
+        "title": "Page 56",
+        "level": 1,
+        "path": "Page 56",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 56
+      },
+      "keywords": [
+        "access",
+        "management",
+        "sap",
+        "budget",
+        "funds management",
+        "funds",
+        "transaction"
+      ]
+    },
+    {
+      "title": "Page 57",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 57 System Work Steps On screen \" Budgeting Workbench – Create document \", enter the information in the fields as specified in the table below: Field Name Description Process Select the process t hat you want to perform i.e. \"Enter\" Budget Category Defaults to \"Payment\" Version Enter version 0 for approved budget Document Type Select document type \"budget upload\" (Z) Document Date Defaults to today's date Period Select the budgeting period 5 Fiscal year Defaults to the current year Budget Type Budget type correspond to the process you are carrying out i.e. \"Orig\" = approved budget Fund Enter the source of funding e.g. SV00 Funds Center Enter the funds center to which the budget is assigned to e.g. 111111XX Commitment item Enter the Commitment item to which the budget is assigned to e.g. 502XXXX Amount Enter the budget line item amount Text Enter any explanatory notes if any. Click on the check button to check for any errors",
+      "metadata": {
+        "title": "Page 57",
+        "level": 1,
+        "path": "Page 57",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 57
+      },
+      "keywords": [
+        "budget",
+        "enter",
+        "type",
+        "document",
+        "process",
+        "funds",
+        "select",
+        "defaults",
+        "version",
+        "item"
+      ]
+    },
+    {
+      "title": "Page 57",
+      "level": 1,
+      "content": ". 502XXXX Amount Enter the budget line item amount Text Enter any explanatory notes if any. Click on the check button to check for any errors. Click on the Additional Data Tab",
+      "metadata": {
+        "title": "Page 57",
+        "level": 1,
+        "path": "Page 57",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 57
+      },
+      "keywords": [
+        "check",
+        "click",
+        "enter",
+        "budget",
+        "text",
+        "check button",
+        "item",
+        "check errors",
+        "enter budget",
+        "click check"
+      ]
+    },
+    {
+      "title": "Page 58",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 58 Enter information in the fields as specified in the table below: Field Name Description Responsible Person Person responsible for budgeting Header Text Enter text for budget entry document Text Name Enter the text descr ibing what type of budget i.e. original budget, return or supplement",
+      "metadata": {
+        "title": "Page 58",
+        "level": 1,
+        "path": "Page 58",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 58
+      },
+      "keywords": [
+        "text",
+        "budget",
+        "enter",
+        "text enter",
+        "enter text",
+        "responsible",
+        "person",
+        "management version",
+        "information",
+        "information fields"
+      ]
+    },
+    {
+      "title": "Page 59",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 59 Click to post the upload and move to display \" Budgeting Workbench – Display Document \" screen as shown below: Result The system will display a message indi cating that document 1xxxxxxxxx has been posted successfully in FM area 1000 and fiscal year 20XX. Note: The budgeting work bench can only take up to 99999 lines Click until you return to the SAP R/3 screen",
+      "metadata": {
+        "title": "Page 59",
+        "level": 1,
+        "path": "Page 59",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 59
+      },
+      "keywords": [
+        "display",
+        "screen",
+        "budgeting",
+        "click",
+        "document",
+        "result display",
+        "lines",
+        "lines click",
+        "management",
+        "management version"
+      ]
+    },
+    {
+      "title": "Page 60",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 60 Exercise 2: Budget Return - Hold This process is triggered when there ar e excess funds to spare within a funds center or when Saudi sees to it that their project ed revenue cannot sustain their expenditure, this functionalit y will enable Saudi to reduce the budget. The amended budget (movements) will be returned via a return program if the line items are many and this will be added onto supplement budget. At this stage the budget holding process does not reduce the overall budget and the affected account assignments can st ill be used even though it has been held. The budget will be returned using a combinat ion of a funds, funds centers, commitment items for operating budget and a combination of funds, funds center, commitment items and funded prog rams (account assignment). The hold functionality will enabl e business units to hold their line items before they are finally reposted",
+      "metadata": {
+        "title": "Page 60",
+        "level": 1,
+        "path": "Page 60",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 60
+      },
+      "keywords": [
+        "budget",
+        "funds",
+        "items",
+        "hold",
+        "process",
+        "commitment",
+        "commitment items",
+        "funds funds",
+        "funds center",
+        "return"
+      ]
+    },
+    {
+      "title": "Page 60",
+      "level": 1,
+      "content": ". The hold functionality will enabl e business units to hold their line items before they are finally reposted. When holding t he document, the user is required to externally assign the transaction number. The following prerequisites are applicable when processing this transaction: Run the budget reports to identify line items that have run out of budget The return file must be approved by the Budget Office A test file that is bal ancing must be signed by the budget office before the live return upload To access the FMBB transaction, follow the Menu Path below, from the SAP Easy Access Screen; Accounting Æ Public Sector Management Æ Funds management Æ Budgeting Æ Budget Control System ÆEntry Documents ÆBudgeting Workbench",
+      "metadata": {
+        "title": "Page 60",
+        "level": 1,
+        "path": "Page 60",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 60
+      },
+      "keywords": [
+        "budget",
+        "transaction",
+        "run",
+        "budget office",
+        "run budget",
+        "management",
+        "line items",
+        "line",
+        "items",
+        "hold"
+      ]
+    },
+    {
+      "title": "Page 61",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 61 System Work Steps On screen \" Budgeting workbench – Create document \", enter the information in the fields as specified in the table below: Field Name Description Process Select the process that you want to perform \"Return\" Budget Category Defaults to \"Payment\" Version Enter version 0 for approved budget Document Type Select document type \"Budget Return\" (ZR) Document Date Defaults to today's date Period Select the budgeting peri od or select a period in which the supplement is to be made Fiscal year Normally defaults to the current year Budget Type Budget type correspond to the process you are carrying out \"RETN\" Fund Enter the source of funding = SV00 Funds Center Enter the funds center to which the budget is to be assigned to e.g. 11111130 Commitment item Enter the Commitment item to which the budget is assigned to or added onto e.g. 5012101 Amount Enter the amount to be returned Text Enter any explanatory notes if any",
+      "metadata": {
+        "title": "Page 61",
+        "level": 1,
+        "path": "Page 61",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 61
+      },
+      "keywords": [
+        "budget",
+        "enter",
+        "select",
+        "type",
+        "document",
+        "version",
+        "process",
+        "funds",
+        "defaults",
+        "return"
+      ]
+    },
+    {
+      "title": "Page 61",
+      "level": 1,
+      "content": ". 11111130 Commitment item Enter the Commitment item to which the budget is assigned to or added onto e.g. 5012101 Amount Enter the amount to be returned Text Enter any explanatory notes if any. Click on the Additional Data Tab",
+      "metadata": {
+        "title": "Page 61",
+        "level": 1,
+        "path": "Page 61",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 61
+      },
+      "keywords": [
+        "enter",
+        "item",
+        "commitment",
+        "commitment item",
+        "enter commitment",
+        "budget",
+        "budget assigned",
+        "assigned",
+        "notes",
+        "text"
+      ]
+    },
+    {
+      "title": "Page 62",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 62 Enter information in the fields as specified in the table below: Click on the Additional Tab which is optional Field Name Description Responsible Person Person responsible for returning the budgeting Header Text Enter text for budget entry document Text Name Enter the text describing what type of budget process i.e. original bu dget, return or supplement Click on to check for any errors Click on to hold the document fo r further processing. Field Name Description Held Document Number Assign a document number to the transaction you are about to hold Result The system will display a message indicating that document XXX has been saved successfully in FM Area 1000 for user xxxxxxx. Click until you return to the SAP R/3 screen",
+      "metadata": {
+        "title": "Page 62",
+        "level": 1,
+        "path": "Page 62",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 62
+      },
+      "keywords": [
+        "document",
+        "text",
+        "click",
+        "enter",
+        "text enter",
+        "description",
+        "document number",
+        "enter text",
+        "field",
+        "field description"
+      ]
+    },
+    {
+      "title": "Page 63",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 63 Exercise 3: Budget Return – Pre-post This process is triggered when the bus iness unit has captured the line items they would like to return by execut ing a process of \"HOLDING\" the funds. After finalizing which line items they would like to return they would now execute the process of reposting. By ex ecuting this step they will no longer be able to make use of these funds thereby reducing the overall budget",
+      "metadata": {
+        "title": "Page 63",
+        "level": 1,
+        "path": "Page 63",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 63
+      },
+      "keywords": [
+        "return",
+        "process",
+        "funds",
+        "items",
+        "line items",
+        "like",
+        "line",
+        "budget",
+        "management",
+        "funds reducing"
+      ]
+    },
+    {
+      "title": "Page 63",
+      "level": 1,
+      "content": ". By ex ecuting this step they will no longer be able to make use of these funds thereby reducing the overall budget. Prerequisites The following prerequisites are applicabl e when processing this transaction: Held document number To access the FMBB transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Public Sector Management Æ Funds management Æ Budgeting Æ Budget Control System ÆEntry Documents ÆBudgeting Workbench System Work Steps On screen \" Budgeting Workbench – Create Document \", under the \"HELD\" documents section select the document number you would like to post and double click on the document number so that the line items entered would appear in the Lines section.",
+      "metadata": {
+        "title": "Page 63",
+        "level": 1,
+        "path": "Page 63",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 63
+      },
+      "keywords": [
+        "document",
+        "document number",
+        "number",
+        "section",
+        "screen",
+        "documents",
+        "funds",
+        "budget",
+        "management",
+        "line"
+      ]
+    },
+    {
+      "title": "Page 64",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 64 Click to repost the held document and move to display \" Budgeting Workbench – Display Document \" screen as shown on the next page Note: The held document number will now be internally assigned Result The system will display a message indi cating that document 4xxxxxxxxx has been created successfully in FM Area fiscal year XXXX. Click until you return to the SAP R/3 screen.",
+      "metadata": {
+        "title": "Page 64",
+        "level": 1,
+        "path": "Page 64",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 64
+      },
+      "keywords": [
+        "document",
+        "display",
+        "click",
+        "screen",
+        "held",
+        "held document",
+        "management version",
+        "internally",
+        "internally assigned",
+        "management"
+      ]
+    },
+    {
+      "title": "Page 65",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 65 Exercise 4: Budget Return - Post This process is triggered when the budget office has requested from business units that do have excess funds to re turn them. Business units will capture and hold the line items they want to retu rn in the system",
+      "metadata": {
+        "title": "Page 65",
+        "level": 1,
+        "path": "Page 65",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 65
+      },
+      "keywords": [
+        "budget",
+        "business",
+        "business units",
+        "funds",
+        "units",
+        "line items",
+        "hold line",
+        "items",
+        "line",
+        "management"
+      ]
+    },
+    {
+      "title": "Page 65",
+      "level": 1,
+      "content": ". Business units will capture and hold the line items they want to retu rn in the system. The transaction is saved under a document number and the document number is given to the budget office for them to post (accept the returned funds) The following prerequisites are applicable when processing this transaction: Held document number To access the FMBB transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Public Sector Management Æ Funds management Æ Budgeting Æ Budget Control System ÆEntry Documents ÆBudgeting Workbench System Work Steps On screen \" Budgeting Workbench – Create Document \", under the \"HELD\" documents section select the document number you would like to post and double click on the document number so that the line items entered would appear in the Lines section.",
+      "metadata": {
+        "title": "Page 65",
+        "level": 1,
+        "path": "Page 65",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 65
+      },
+      "keywords": [
+        "document",
+        "document number",
+        "number",
+        "transaction",
+        "workbench",
+        "section",
+        "screen",
+        "documents",
+        "items",
+        "funds"
+      ]
+    },
+    {
+      "title": "Page 66",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 66 Click to post the held document and move to display \" Budgeting Workbench – Display Document \" screen as shown on the next page: Result The system will display a message indi cating that document 2xxxxxxxxx has been created successfully in FM Area fiscal year XXXX. Click until you return to the SAP R/3 screen",
+      "metadata": {
+        "title": "Page 66",
+        "level": 1,
+        "path": "Page 66",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 66
+      },
+      "keywords": [
+        "display",
+        "document",
+        "screen",
+        "click",
+        "sap screen",
+        "indi cating",
+        "management",
+        "management version",
+        "message",
+        "message indi"
+      ]
+    },
+    {
+      "title": "Page 67",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 67 Exercise 5: Budget Supplement In such cases, you are allocating additi onal budget from outsi de to a particular combination of funds centers and commi tment items thereby increasing the overall budget amount. Normally this has been done by Saudi via the process of Budget Amendment. The supplementary budget wil l be uploaded using a co mbination of a funds, funds centers, commitment items fo r operating budget and a combination of funds, funds center, commitment items and funded pr ograms (account assignment). Prerequisites The following prerequisites are applicabl e when processing this transaction: Check the whether the master record s to be used has been created in the system The supplement upload file must be authorized by the budget office",
+      "metadata": {
+        "title": "Page 67",
+        "level": 1,
+        "path": "Page 67",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 67
+      },
+      "keywords": [
+        "budget",
+        "funds",
+        "items",
+        "funds funds",
+        "commitment",
+        "prerequisites",
+        "centers",
+        "combination",
+        "combination funds",
+        "supplement"
+      ]
+    },
+    {
+      "title": "Page 67",
+      "level": 1,
+      "content": ". To access the FMBBC transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Public Sector Management Æ Funds management Æ Budgeting Æ Budget Control System ÆEntry Documents ÆCreate",
+      "metadata": {
+        "title": "Page 67",
+        "level": 1,
+        "path": "Page 67",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 67
+      },
+      "keywords": [
+        "access",
+        "management",
+        "path sap",
+        "path",
+        "budget",
+        "funds",
+        "funds management",
+        "transaction"
+      ]
+    },
+    {
+      "title": "Page 68",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 68 System Work Steps On screen \" Budgeting workbench – Create document \", enter the information in the fields in the table below: Field Name Description Process Select the process that you want to perform \"Supplement\" Budget Category Defaults to \"Payment\" Version Enter version 0 for approved budget Document Type Select document type \"Budget Supplement\" (ZS) Document Date Defaults to today's date Period Select the budgeting peri od or select a period in which the supplement is to be made Fiscal year Normally defaults to the current year Budget Type Budget type correspond to the process you are carrying out \"SUPP\" Fund Enter the source of funding e.g. SV00 Funds Center Enter the funds center to which the budget is to be assigned to e.g. 11111130 Commitment item Enter the Commitm ent item to which the budget is assigned to or added onto e.g. 50121XX Amount Enter the amount to be added to the overall approved budget Text Enter any explanatory notes if any",
+      "metadata": {
+        "title": "Page 68",
+        "level": 1,
+        "path": "Page 68",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 68
+      },
+      "keywords": [
+        "budget",
+        "enter",
+        "select",
+        "type",
+        "document",
+        "version",
+        "defaults",
+        "supplement",
+        "process",
+        "funds"
+      ]
+    },
+    {
+      "title": "Page 68",
+      "level": 1,
+      "content": ". 50121XX Amount Enter the amount to be added to the overall approved budget Text Enter any explanatory notes if any. Click on the",
+      "metadata": {
+        "title": "Page 68",
+        "level": 1,
+        "path": "Page 68",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 68
+      },
+      "keywords": [
+        "enter",
+        "explanatory",
+        "explanatory notes",
+        "approved",
+        "approved budget",
+        "budget",
+        "enter explanatory",
+        "added",
+        "text",
+        "text enter"
+      ]
+    },
+    {
+      "title": "Page 69",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 69 Enter any other relevant information per taining to this Supplement Budget upload Field Name Description Responsible Person Person responsible for loading the supplement budget Header Text Enter any text for budget entry document Text Name Enter text describ ing what type of budget i.e. original budget, return or supplement Click to post the document and move to display \"Budgeting Workbench – Display Document\" screen as shown below Result The system will display a message indi cating that document 3xxxxxxxxx has been created successfully in FM area 1000 and fiscal year 20XX.",
+      "metadata": {
+        "title": "Page 69",
+        "level": 1,
+        "path": "Page 69",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 69
+      },
+      "keywords": [
+        "budget",
+        "document",
+        "text",
+        "supplement",
+        "display",
+        "enter",
+        "text enter",
+        "supplement budget",
+        "responsible",
+        "enter text"
+      ]
+    },
+    {
+      "title": "Page 70",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 70 Click until you return to the SAP R/3 screen",
+      "metadata": {
+        "title": "Page 70",
+        "level": 1,
+        "path": "Page 70",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 70
+      },
+      "keywords": [
+        "version 01",
+        "funds",
+        "01 70",
+        "70",
+        "70 click",
+        "click",
+        "click return",
+        "fi_05",
+        "fi_05 funds",
+        "funds management"
+      ]
+    },
+    {
+      "title": "Page 71",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 71 Budget Planning The Funds Management module will be used to manage and monitor the Capital Expenditure and Operating Ex penditure by Saudi Holding and its subsidiaries. The Funds Management m odule is the component that allows you to manage your budget within SAP R/3. Budget planning and execution is mainly based on these main element s i.e. fund, funds centers and commitment items and funded program s and these elements are used to determine what is to be planned (Co mmitment items & funded programs), which responsibility area (Funds center) is to conduct the planning, which source of funding (Fund) is to be used. Funds Management allows a full integration with other components such as: Financial Accounting Controlling Human Resources MRO (SCM – Supply Chain Management) The source of Funding is the basis of formulating an an nual budget for the Saudi",
+      "metadata": {
+        "title": "Page 71",
+        "level": 1,
+        "path": "Page 71",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 71
+      },
+      "keywords": [
+        "management",
+        "funds",
+        "funds management",
+        "used",
+        "budget",
+        "planning",
+        "source funding",
+        "allows",
+        "fund",
+        "saudi"
+      ]
+    },
+    {
+      "title": "Page 71",
+      "level": 1,
+      "content": ". The different sources of fundi ng identified are the Revenue generated by Saudi, and to some extent Go vernment Grants and Subsidies. This is totals oriented and contains an aggregation of the amounts per FM account assignment (combination of a fund, funds center funded program and commitment item). The (Saudi) planning has multiple budgeting cycles before agreeing on a final budget version. A la rge portion of the creation of the budget takes place outside of any given financial system. The compilation of the overall budget and the manipulation thereof until it is sent for final approval will however be done in Exce l. Once the budget has been approved by the budget committee, the approv ed budget will be copied to the final version in SAP R/3 by the Budget Office. Budget Office will lock the originally approved budget version 1 against any changes. Changes to the finally approved budget can only be made using the amendment which is approved by Budget Office only",
+      "metadata": {
+        "title": "Page 71",
+        "level": 1,
+        "path": "Page 71",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 71
+      },
+      "keywords": [
+        "budget",
+        "approved",
+        "approved budget",
+        "office",
+        "budget office",
+        "final",
+        "version",
+        "saudi",
+        "changes",
+        "fund"
+      ]
+    },
+    {
+      "title": "Page 71",
+      "level": 1,
+      "content": ". Changes to the finally approved budget can only be made using the amendment which is approved by Budget Office only. Business units can only reallocate a budget within a budget and within various constraints c ontained in the transfer criteria. Funds Management allows you to load t he result of your budget preparation straight to your final version (Actual version 0) which is represented by the budget consumption and transfers. T he process of an entry document indicates whether you want to enter new budget data or update the budget by increasing it or decreasing it.",
+      "metadata": {
+        "title": "Page 71",
+        "level": 1,
+        "path": "Page 71",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 71
+      },
+      "keywords": [
+        "budget",
+        "approved",
+        "approved budget",
+        "version",
+        "final",
+        "budget office",
+        "budget using",
+        "changes",
+        "allows",
+        "funds management"
+      ]
+    },
+    {
+      "title": "Page 72",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 72 Exercise 1: Budget Planning It's the middle of the year and cost c enters must start pr eparing the budget for the coming year. All cost centers will be requ ired to enter their \"wish list\" into a selection version e.g. version 10 for in itial budget planning upload. Once they have captured their plans in this versi on, it will automatic ally appear in the budget report. Fro this stage onwards the budget preparati on cycle will begin and the manipulation of it will continue until a final annual budget amount is reached. Excel worksheets will be pr epared and made available to CCs to make the calculations and update the fi nal spreadsheet for upload into SAP. Budget versions will be created when a ch ange to a current version so that changes can easily be tracked. Budgets wil l be uploaded per per iod for the full year i.e. Budgets can be divided equal ly for the 12months or different amounts can be assigned to the various periods",
+      "metadata": {
+        "title": "Page 72",
+        "level": 1,
+        "path": "Page 72",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 72
+      },
+      "keywords": [
+        "budget",
+        "version",
+        "year",
+        "planning",
+        "budget planning",
+        "cost",
+        "year cost",
+        "pr",
+        "budgets",
+        "periods"
+      ]
+    },
+    {
+      "title": "Page 72",
+      "level": 1,
+      "content": ". Budgets wil l be uploaded per per iod for the full year i.e. Budgets can be divided equal ly for the 12months or different amounts can be assigned to the various periods. All FM master data must exist before this process commences: Budget versions must be created The upcoming budgeting fiscal y ear and periods must be opened The correct budgeting status must be a ssigned to the budget versions i.e. prep status.",
+      "metadata": {
+        "title": "Page 72",
+        "level": 1,
+        "path": "Page 72",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 72
+      },
+      "keywords": [
+        "budgeting",
+        "budget",
+        "versions",
+        "budget versions",
+        "budgets",
+        "periods",
+        "year",
+        "budgets divided",
+        "budgets wil",
+        "created"
+      ]
+    },
+    {
+      "title": "Page 73",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 73 Exercise 2: Budget Run This is the process of choosing the layout t hat will be used to capt ure the proposed budget from Excel Integration into the SAP system. Fo r training purposes we shall use the current layout provided. Prerequisite: The budgeting layout must exist already To access the FMPLSET transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Public Sector Management Æ Funds management Æ Budgeting Æ Budget Control System ÆPlanning ÆSet Planner profile",
+      "metadata": {
+        "title": "Page 73",
+        "level": 1,
+        "path": "Page 73",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 73
+      },
+      "keywords": [
+        "management",
+        "budget",
+        "layout",
+        "sap",
+        "budgeting",
+        "funds",
+        "funds management",
+        "access",
+        "profile",
+        "process choosing"
+      ]
+    },
+    {
+      "title": "Page 74",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 74 Field Name Description Planner profile Select the layout to be used for budget planning e.g. ZSAUDIA Press enter to confirm the planner profile to be used. Select to accept the settings",
+      "metadata": {
+        "title": "Page 74",
+        "level": 1,
+        "path": "Page 74",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 74
+      },
+      "keywords": [
+        "profile",
+        "planner",
+        "used",
+        "planner profile",
+        "select",
+        "version 01",
+        "management version",
+        "planning",
+        "planning zsaudia",
+        "press"
+      ]
+    },
+    {
+      "title": "Page 75",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 75",
+      "metadata": {
+        "title": "Page 75",
+        "level": 1,
+        "path": "Page 75",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 75
+      },
+      "keywords": [
+        "version 01",
+        "version",
+        "management version",
+        "management",
+        "funds management",
+        "funds",
+        "fi_05 funds",
+        "fi_05",
+        "75",
+        "01 75"
+      ]
+    },
+    {
+      "title": "Page 76",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 76 Exercise 3: Budgeting Planning Process This is the processing where the budgeting cycle begins where users from various Cost Centers propose their budget figures for the coming New Year Prerequisites: All computers must have Microsoft Exce l and the security Settings must be set to Low The FM master data to be used must exist The budgeting layout must exist already Budgeting periods must be open To access the FMPLCPD transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting Æ Public Sector Management Æ Funds management Æ Budgeting Æ Budget Control System ÆPlanning ÆChange Plan Data System Work:",
+      "metadata": {
+        "title": "Page 76",
+        "level": 1,
+        "path": "Page 76",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 76
+      },
+      "keywords": [
+        "budgeting",
+        "management",
+        "access",
+        "budget",
+        "data",
+        "exist",
+        "exist budgeting",
+        "funds",
+        "funds management",
+        "propose"
+      ]
+    },
+    {
+      "title": "Page 77",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 77 Field Name Description Budget Category Select 9F Version Enter version 10 for initial budget upload Fiscal year Select the budget preparation Year e.g. 2009 Period Select the start budgeting period To Period Select the send budgeting period Budget Type Budget type correspond to the process you are carrying out \"PREP\" Fund Enter the source of funding e.g. SV00 Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 To Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 Commitment item Enter the Commitm ent item for which the budget is to be prepared for e.g. 5020000 To Commitment item Enter the Commi tment item for which the budget is to be prepared for e.g. 5029999 Funded Program For this exercise leave it blank To Funded Program For this exercise leave it blank Select Form based as shown below and press to go the next screen",
+      "metadata": {
+        "title": "Page 77",
+        "level": 1,
+        "path": "Page 77",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 77
+      },
+      "keywords": [
+        "budget",
+        "enter",
+        "select",
+        "funds",
+        "budget prepared",
+        "prepared",
+        "period",
+        "center",
+        "item",
+        "funds center"
+      ]
+    },
+    {
+      "title": "Page 78",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 78 On the pop up screen select Enable Macros",
+      "metadata": {
+        "title": "Page 78",
+        "level": 1,
+        "path": "Page 78",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 78
+      },
+      "keywords": [
+        "version",
+        "select enable",
+        "01 78",
+        "78",
+        "78 pop",
+        "enable",
+        "enable macros",
+        "fi_05",
+        "fi_05 funds",
+        "funds"
+      ]
+    },
+    {
+      "title": "Page 79",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 79 In the Amount Column enter the proposed budget amounts to be posted in version 10 Enter the proposed amounts as negatives as shown below as the sign will be changed to a positive when in the system.",
+      "metadata": {
+        "title": "Page 79",
+        "level": 1,
+        "path": "Page 79",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 79
+      },
+      "keywords": [
+        "version",
+        "amounts",
+        "enter",
+        "enter proposed",
+        "proposed",
+        "negatives shown",
+        "funds management",
+        "management",
+        "management version",
+        "negatives"
+      ]
+    },
+    {
+      "title": "Page 80",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 80 To post the proposed budget figures select Plan Data Æ Post (Ctrl + S) Result The system will display a message indicati ng that planning data posted under document no.12xxxxxxxx to ledger 9f",
+      "metadata": {
+        "title": "Page 80",
+        "level": 1,
+        "path": "Page 80",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 80
+      },
+      "keywords": [
+        "data",
+        "post",
+        "result",
+        "plan",
+        "management",
+        "management version",
+        "message",
+        "message indicati",
+        "ng",
+        "ng planning"
+      ]
+    },
+    {
+      "title": "Page 81",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 81 Exercise 4: Budget Overall Report Once the CCs have captured their wish list the budget office can immediately run reports to view the proposed budgets captured and th is will be the starting process of decreasing or increasing the budgets. Prerequisite: Proposed budget must have been enter ed in the version to be viewed To access the FMRP_RW_BUDGET transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting → Financial Accounting → Public Sector Management → Funds Management - Information Systems → Total Records → Budget Control System → Budget → Budget Overview",
+      "metadata": {
+        "title": "Page 81",
+        "level": 1,
+        "path": "Page 81",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 81
+      },
+      "keywords": [
+        "budget",
+        "management",
+        "version",
+        "access",
+        "accounting",
+        "budgets",
+        "captured",
+        "funds",
+        "proposed",
+        "funds management"
+      ]
+    },
+    {
+      "title": "Page 82",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 82 Field Name Description Financial Management Area 1000 Budget Category Select 9F Version Enter version 10 for initial budget upload Fund Enter the source of funding e.g. SV00 Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 To Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 Commitment item Enter the Commitm ent item for which the budget is to be prepared for e.g. 5020000 To Commitment item Enter the Commi tment item for which the budget is to be prepared for e.g. 5029999",
+      "metadata": {
+        "title": "Page 82",
+        "level": 1,
+        "path": "Page 82",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 82
+      },
+      "keywords": [
+        "budget",
+        "enter",
+        "funds",
+        "prepared",
+        "budget prepared",
+        "center",
+        "item",
+        "funds center",
+        "version",
+        "commitment"
+      ]
+    },
+    {
+      "title": "Page 83",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 83 Note: This budgeting process is a r epetitive process with budget cuts and additions hence users will be required to use the same transaction code FMPLCPD until a final version is agreed upon. Cost centers can be asked to reduce or add certain amounts and thereby automatically updatin g this report.",
+      "metadata": {
+        "title": "Page 83",
+        "level": 1,
+        "path": "Page 83",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 83
+      },
+      "keywords": [
+        "version",
+        "process",
+        "management",
+        "fi_05 funds",
+        "final",
+        "final version",
+        "fmplcpd",
+        "fmplcpd final",
+        "funds",
+        "funds management"
+      ]
+    },
+    {
+      "title": "Page 84",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 84 Exercise 5: Copying from one version to another This process is used to copy data from version to another in order to differentiate the iterations that have been encountered or for back up purposes for ease of tracking figures. Prerequisites: The frozen budget versions must already exist in the system The correct status must be assigned to version The relevant periods and fiscal y ear must be open in the system To access the FMCYPREP transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting → Financial Accounting → Public Sector Management → Funds Management - Information Systems → Total Records → Budget Control System → Tools → Planning Æ Generate Planning Data Field Name Description Financial Management Area 1000 Budget Category Select 9F Version Enter version 10 for initial budget upload Fund Enter the source of funding e.g. SV00 Fiscal Year Enter the budget prep year 2008 Period 1 to 12 for the whole year",
+      "metadata": {
+        "title": "Page 84",
+        "level": 1,
+        "path": "Page 84",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 84
+      },
+      "keywords": [
+        "version",
+        "budget",
+        "management",
+        "year",
+        "enter",
+        "funds",
+        "access",
+        "accounting",
+        "data",
+        "financial"
+      ]
+    },
+    {
+      "title": "Page 85",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 85 Field Name Description Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 To Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 Commitment item Enter the Commitm ent item for which the budget is to be prepared for e.g. 5020000 To Commitment item Enter the Commi tment item for which the budget is to be prepared for e.g. 5029999 Basic Calculation From the above screen \"Select the radio button option – Budget\" From the above screen \"Select the radio button option – All Planning data\"",
+      "metadata": {
+        "title": "Page 85",
+        "level": 1,
+        "path": "Page 85",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 85
+      },
+      "keywords": [
+        "budget",
+        "funds",
+        "prepared",
+        "budget prepared",
+        "center",
+        "item",
+        "funds center",
+        "enter",
+        "select radio",
+        "center enter"
+      ]
+    },
+    {
+      "title": "Page 86",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 86 These are the settings of the budget version you are copying to Target Settings Budget Category Select 9F Version Enter version 10 for initial budget upload Fiscal Year 2008 Target Period Period 1 To 12 Budget Type Copy Budget Type Processing Options Update Mode Select the appropria te modes i.e. add data or overwrite the data already in the version if any. Test Run Select the appropria te mode i.e. test run or production run Detail List Select the tick in order to get more information of the process you are doing Click on execute of press F8 to process the transaction in the Test run mode Test Run Results screen",
+      "metadata": {
+        "title": "Page 86",
+        "level": 1,
+        "path": "Page 86",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 86
+      },
+      "keywords": [
+        "version",
+        "budget",
+        "run",
+        "test",
+        "test run",
+        "select",
+        "mode",
+        "period",
+        "appropria te",
+        "budget type"
+      ]
+    },
+    {
+      "title": "Page 87",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 87 Production Run Go back to the previous screen and deselect the Test Run option Live/Production run results screen This process is carried out whenever data is to be copied to a new version. And when the budget is finalized it must then be copied to a final version which is to be locked by the budget office which is the next step",
+      "metadata": {
+        "title": "Page 87",
+        "level": 1,
+        "path": "Page 87",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 87
+      },
+      "keywords": [
+        "version",
+        "run",
+        "budget",
+        "copied",
+        "production run",
+        "production",
+        "screen",
+        "option live",
+        "new version",
+        "office"
+      ]
+    },
+    {
+      "title": "Page 88",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 88 Exercise 6: Generating budget Data into the Final Version This is the final process of the budget cycle where the proposed budget is now copied into a final version. Prerequisite: The budget must have been approved The budget version must exist To access the FMCYLOAD transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting → Financial Accounting → Public Sector Management → Funds Management - Information Systems → Total Records → Budget Control System → Tools → Entry Documents Æ Generate Budget Data Field Name Description Financial Management Area 1000 Budget Category Select 9F Version Enter version 10 for initial budget upload Fund Enter the source of funding e.g. SV00 Fiscal Year Enter the budget prep year 2008",
+      "metadata": {
+        "title": "Page 88",
+        "level": 1,
+        "path": "Page 88",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 88
+      },
+      "keywords": [
+        "budget",
+        "version",
+        "management",
+        "enter",
+        "final",
+        "year",
+        "financial",
+        "accounting",
+        "budget data",
+        "data"
+      ]
+    },
+    {
+      "title": "Page 89",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 89 Field Name Description Period 1 to 12 for the whole year Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 To Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 Commitment item Enter the Commitm ent item for which the budget is to be prepared for e.g. 5020000 To Commitment item Enter the Commi tment item for which the budget is to be prepared for e.g. 5029999 Basic Calculation From the above screen \"Select t he radio button option – Budget\" From the above screen \"Select the r adio button option – All Processes and Budget types\" Revaluation (%) – Leave it at 100.00",
+      "metadata": {
+        "title": "Page 89",
+        "level": 1,
+        "path": "Page 89",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 89
+      },
+      "keywords": [
+        "budget",
+        "funds",
+        "budget prepared",
+        "item",
+        "funds center",
+        "enter",
+        "prepared",
+        "center",
+        "prepared 11111199",
+        "center budget"
+      ]
+    },
+    {
+      "title": "Page 90",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 90 These are the settings of the budget version you are copying to Target Settings Budget Category Select 9F Version Enter version 2 for approved budget upload Fiscal Year 2008 Target Period Period 1 To 12 Budget Type Budget Type = Orig Processing Options Update Mode Select the appropria te modes i.e. add data or overwrite the data already in the version if any. Test Run Select the appropria te mode i.e. test run or production run Detail List Select the tick in order to get more infor Click on execute of press F8 for a Test run",
+      "metadata": {
+        "title": "Page 90",
+        "level": 1,
+        "path": "Page 90",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 90
+      },
+      "keywords": [
+        "version",
+        "budget",
+        "select",
+        "run",
+        "test",
+        "test run",
+        "te",
+        "target",
+        "settings budget",
+        "settings"
+      ]
+    },
+    {
+      "title": "Page 91",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 91 Production Run Go back to the previous screen and deselect the Test Run option",
+      "metadata": {
+        "title": "Page 91",
+        "level": 1,
+        "path": "Page 91",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 91
+      },
+      "keywords": [
+        "run",
+        "test run",
+        "option",
+        "deselect test",
+        "fi_05",
+        "fi_05 funds",
+        "funds",
+        "funds management",
+        "management",
+        "management version"
+      ]
+    },
+    {
+      "title": "Page 92",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 92 This is the final approved version which must now be copied into a locked version",
+      "metadata": {
+        "title": "Page 92",
+        "level": 1,
+        "path": "Page 92",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 92
+      },
+      "keywords": [
+        "version",
+        "version 01",
+        "01 92",
+        "92",
+        "92 final",
+        "approved",
+        "approved version",
+        "copied",
+        "copied locked",
+        "fi_05"
+      ]
+    },
+    {
+      "title": "Page 93",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 93 Exercise 7: Freeze Budget Version This is the process of copying th e approved budget into a locked version against any changes. Prerequisites: The frozen version must have been created Correct statuses assigned Periods opened To access the FMCYFREEZE transaction, follow the Menu Path below, from the SAP Easy Access Screen: Accounting → Financial Accounting → Public Sector Management → Funds Management - Information Systems → Total Records → Budget Control System → Version → Freeze Budget Data of a version Field Name Description Financial Management Area Defaults to 1000 Budget Category Defaults to 9F Fiscal Year 2008 Budget Select Budget option only Fund Enter the source of funding e.g. SV00 Period 1 to 12 for the whole year Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 To Funds Center Enter the funds center for which the budget is to be prepared for e.g",
+      "metadata": {
+        "title": "Page 93",
+        "level": 1,
+        "path": "Page 93",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 93
+      },
+      "keywords": [
+        "budget",
+        "version",
+        "funds",
+        "management",
+        "funds center",
+        "center",
+        "enter",
+        "accounting",
+        "defaults",
+        "freeze budget"
+      ]
+    },
+    {
+      "title": "Page 93",
+      "level": 1,
+      "content": ". 11111199 To Funds Center Enter the funds center for which the budget is to be prepared for e.g. 11111199 Commitment item Enter the Commitm ent item for which the budget is to be prepared for e.g. 5020000 To Commitment item Enter the Commi tment item for which the budget is to be prepared for e.g. 5029999 Source Version Version 2 Target Version (frozen) 11",
+      "metadata": {
+        "title": "Page 93",
+        "level": 1,
+        "path": "Page 93",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 93
+      },
+      "keywords": [
+        "item",
+        "version",
+        "enter",
+        "budget",
+        "budget prepared",
+        "prepared",
+        "commitment",
+        "commitment item",
+        "center",
+        "11111199"
+      ]
+    },
+    {
+      "title": "Page 94",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 94 Run Screen Results IF the test run is successful then re move the test run option and make a live/production run to update the database",
+      "metadata": {
+        "title": "Page 94",
+        "level": 1,
+        "path": "Page 94",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 94
+      },
+      "keywords": [
+        "run",
+        "test run",
+        "test",
+        "update database",
+        "run option",
+        "01 94",
+        "option make",
+        "production",
+        "production run",
+        "results"
+      ]
+    },
+    {
+      "title": "Page 95",
+      "level": 1,
+      "content": "FI_05 Funds Management Version 01 95 Production Run If the production run is successful it will give out a document number and will show that the update has been successful. This will be the whole process of budget preparation.",
+      "metadata": {
+        "title": "Page 95",
+        "level": 1,
+        "path": "Page 95",
+        "sap_module": null,
+        "transaction_codes": [],
+        "wricef_items": [],
+        "page_number": 95
+      },
+      "keywords": [
+        "production",
+        "successful",
+        "run",
+        "production run",
+        "process",
+        "funds",
+        "funds management",
+        "management",
+        "management version",
+        "number update"
+      ]
+    }
+  ],
+  "tables": [],
+  "table_contexts": [],
+  "document_name": "funds-management-enduser-training-manual.pdf"
+}

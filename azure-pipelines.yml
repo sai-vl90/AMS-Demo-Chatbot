@@ -2,8 +2,7 @@ trigger:
 - main
 
 variables:
-  pythonVersion: '3.9'
-  webAppName: 'ams-demo-app'
+  pythonVersion: '3.12'
 
 pool:
   vmImage: ubuntu-latest
@@ -56,7 +55,6 @@ steps:
 # Deploy to Azure Web App
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'ndbs-innovation-Unified-Data-Analytics'
     appName: 'ams-demo-app'
     package: '$(Build.ArtifactStagingDirectory)/app.zip'
-    startUpCommand: 'python app.py'
+    deploymentMethod: 'auto'

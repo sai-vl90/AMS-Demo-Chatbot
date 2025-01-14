@@ -257,7 +257,6 @@ python-iso639==2024.4.27
 python-multipart==0.0.9
 python-oxmsg==0.0.1
 python-pptx==1.0.2
-pywin32==306
 PyYAML==6.0.2
 pyzmq==26.2.0
 RapidFuzz==3.10.0

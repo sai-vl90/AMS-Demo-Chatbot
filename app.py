@@ -8,8 +8,6 @@ from langsmith import traceable
 # If you're using a RAG pipeline, uncomment these:
 from src.generation.rag_chain import RAGPipeline
 from src.config_loader import load_config, set_environment_variables
-import os
-
 
 app = Flask(
     __name__, 
@@ -19,9 +17,9 @@ app = Flask(
 )
 CORS(app)
 
-# Setup logging
+# Setup logging with more detailed output
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,  # Changed to DEBUG for more visibility
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
@@ -32,6 +30,7 @@ rag = None
 def initialize_rag():
     global rag
     try:
+        logger.debug("Starting RAG initialization...")
         config = load_config()
         set_environment_variables(config)
         rag = RAGPipeline(
@@ -40,6 +39,7 @@ def initialize_rag():
         logger.info("RAG pipeline initialized successfully")
     except Exception as e:
         logger.error(f"Failed to initialize RAGPipeline: {str(e)}")
+        logger.exception("Detailed error:")  # This will log the full traceback
         raise
 
 def list_local_preprocessed_docs(folder_path="data/preprocessed"):
@@ -63,7 +63,12 @@ def list_local_preprocessed_docs(folder_path="data/preprocessed"):
 @app.route('/<path:path>')
 def serve_static(path):
     """Serve static files from the frontend directory."""
-    return send_from_directory('frontend', path)
+    logger.debug(f"Attempting to serve static file: {path}")
+    try:
+        return send_from_directory('frontend', path)
+    except Exception as e:
+        logger.error(f"Error serving static file {path}: {str(e)}")
+        return str(e), 500
 
 @app.route('/')
 def home():
@@ -72,11 +77,24 @@ def home():
     passing in the list of local doc names so the greeting
     can display them.
     """
+    logger.debug("Handling request to home route '/'")
     try:
+        # Check if frontend directory exists
+        if not os.path.exists('frontend'):
+            logger.error("Frontend directory not found")
+            return "Frontend directory not found", 500
+            
+        # Check if index.html exists
+        if not os.path.exists('frontend/index.html'):
+            logger.error("index.html not found in frontend directory")
+            return "index.html not found", 500
+
         doc_names = list_local_preprocessed_docs("data/preprocessed")
+        logger.debug(f"Found doc_names: {doc_names}")
         return render_template('index.html', doc_names=doc_names)
     except Exception as e:
         logger.error(f"Error rendering template: {str(e)}")
+        logger.exception("Detailed error:")  # This will log the full traceback
         return str(e), 500
 
 @app.route('/chat', methods=['POST'])
@@ -88,9 +106,6 @@ def chat():
     call rag.generate_response(user_message) here.
     """
     try:
-        # if rag is None:
-        #     return jsonify({'error': "RAG pipeline not initialized."}), 503
-
         if not request.is_json:
             return jsonify({'error': "Request must be JSON"}), 400
             
@@ -98,17 +113,32 @@ def chat():
         if not user_message:
             return jsonify({'error': "Empty message received."}), 400
 
-        # Example placeholder response:
-        # If you have a RAG pipeline:
+        logger.debug(f"Processing chat message: {user_message}")
+        
+        if rag is None:
+            logger.error("RAG pipeline not initialized")
+            return jsonify({'error': "RAG pipeline not initialized."}), 503
+
         response = rag.generate_response(user_message)
+        logger.debug("Successfully generated response")
         return jsonify({'answer': response.answer, 'sources': response.sources})
 
     except Exception as e:
         logger.error(f"Error in /chat endpoint: {str(e)}")
+        logger.exception("Detailed error:")  # This will log the full traceback
         return jsonify({'error': str(e)}), 500
+
+@app.route('/health')
+def health_check():
+    """Health check endpoint"""
+    return jsonify({
+        "status": "healthy",
+        "rag_initialized": rag is not None
+    }), 200
 
 @app.errorhandler(404)
 def not_found_error(error):
+    logger.warning(f"404 error: {str(error)}")
     return jsonify({'error': 'Not found'}), 404
 
 @app.errorhandler(500)
@@ -116,34 +146,31 @@ def internal_error(error):
     logger.error(f"Internal server error: {str(error)}")
     return jsonify({'error': 'Internal server error'}), 500
 
-def check_port_availability(port):
-    import socket
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        try:
-            s.bind(('', port))
-            return True
-        except OSError:
-            return False
+# Initialize the application
+def create_app():
+    try:
+        logger.info("Initializing application...")
+        initialize_rag()
+        logger.info("Application initialization complete")
+        return app
+    except Exception as e:
+        logger.error(f"Failed to initialize application: {str(e)}")
+        logger.exception("Detailed error:")
+        raise
+
+# This will be used by waitress-serve
+application = create_app()
 
 if __name__ == '__main__':
     try:
-        # If you have a RAG pipeline, uncomment:
-        initialize_rag()
-
-        port = 5000
-        if not check_port_availability(port):
-            logger.warning(f"Port {port} is already in use. Trying port 8000...")
-            port = 8000
-            if not check_port_availability(port):
-                raise RuntimeError("Both ports 5000 and 8000 are in use. Please free up a port or specify a different one.")
-        
-        logger.info(f"Starting Flask app on port {port}")
+        port = int(os.getenv('PORT', 8000))
         app.run(
             host='0.0.0.0',
             port=port,
             threaded=True,
-            debug=False
+            debug=True  # Enable debug mode for local development
         )
     except Exception as e:
         logger.error(f"Failed to start the application: {str(e)}")
+        logger.exception("Detailed error:")
         raise

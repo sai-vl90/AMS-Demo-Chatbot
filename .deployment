@@ -1,5 +1,0 @@
-[config]
-SCM_DO_BUILD_DURING_DEPLOYMENT=true
-PYTHON_VERSION=3.12
-PYTHONPATH=/home/site/wwwroot
-command=./build.sh && python startup.py

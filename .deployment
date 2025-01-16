@@ -1,5 +1,5 @@
 [config]
 SCM_DO_BUILD_DURING_DEPLOYMENT=true
-PYTHON_VERSION=3.11
+PYTHON_VERSION=3.12.5
 PYTHONPATH=/home/site/wwwroot
 command=python -m pip install --upgrade pip && pip install -r requirements.txt && python startup.py

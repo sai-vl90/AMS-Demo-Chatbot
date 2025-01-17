@@ -1,9 +1,14 @@
 name: Build and deploy Python app to Azure Web App - ams-bot
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: ams-bot
+  PYTHON_VERSION: '3.12'
 
 jobs:
   build:
@@ -11,10 +16,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python version
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: Create and configure virtual environment
+        run: |
+          python -m venv antenv
+          source antenv/bin/activate
+          python -m pip install --upgrade pip wheel setuptools
+          pip install -r requirements.txt
+          deactivate
 
       - name: Create necessary directories
         run: |
@@ -22,33 +36,23 @@ jobs:
           mkdir -p data/raw
           mkdir -p frontend
 
-      - name: Create and start virtual environment
+      - name: Generate deployment package
         run: |
-          python -m venv antenv
-          source antenv/bin/activate
-      
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-        
-      - name: Zip artifact for deployment
-        run: |
-          zip release.zip ./* -r \
+          zip -r release.zip . \
           -x "*.git*" \
-          -x "*__pycache__*" \
-          -x "*.pytest_cache*" \
-          -x "*.venv*" \
-          -x "venv/*" \
-          -x ".env*"
+          -x "*/__pycache__/*" \
+          -x "*.pytest_cache/*" \
+          -x "*.venv/*" \
+          -x "*/.env/*" \
+          -x "*.vscode/*" \
+          -x "*/.idea/*"
 
-      - name: Upload artifact for deployment jobs
+      - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: python-app
-          path: |
-            release.zip
-            !venv/
+          path: release.zip
+          retention-days: 1
 
   deploy:
     runs-on: ubuntu-latest
@@ -56,7 +60,7 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
+
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
@@ -65,11 +69,12 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-      
+
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
         with:
-          app-name: 'ams-bot'
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C89356C6CDBB48F69EDCCA4140890DA5 }}
+          startup-command: 'python -m venv antenv && source antenv/bin/activate && pip install -r requirements.txt && python startup.py'

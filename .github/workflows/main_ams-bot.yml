@@ -34,12 +34,6 @@ jobs:
           mkdir -p data/raw
           mkdir -p frontend
 
-      # Optional: Test the application if you have tests
-      # - name: Run tests
-      #   run: |
-      #     pip install pytest
-      #     pytest
-
       - name: Zip artifact for deployment
         run: |
           zip -r release.zip . \
@@ -48,9 +42,7 @@ jobs:
             -x "*.pytest_cache/*" \
             -x ".venv/*" \
             -x ".env" \
-            -x "*.pyc" \
-            -x ".vscode/*" \
-            -x ".idea/*"
+            -x "*.pyc"
 
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
@@ -83,8 +75,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C89356C6CDBB48F69EDCCA4140890DA5 }}
           package: .
-          startup-command: |
-            cd /home/site/wwwroot && 
-            python -m pip install --upgrade pip &&
-            pip install -r requirements.txt &&
-            python startup.py

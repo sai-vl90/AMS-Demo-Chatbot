@@ -25,14 +25,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip wheel setuptools
           pip install -r requirements.txt
-          
+          pip install waitress  # Ensure waitress is installed
+
       - name: Create necessary directories
         run: |
           mkdir -p data/preprocessed
           mkdir -p data/raw
           mkdir -p frontend
+          chmod -R 755 data frontend  # Ensure directories are accessible
 
       - name: Zip artifact for deployment
         run: |
@@ -42,7 +44,9 @@ jobs:
             -x "*.pytest_cache/*" \
             -x ".venv/*" \
             -x ".env" \
-            -x "*.pyc"
+            -x "*.pyc" \
+            -x "*.vscode/*" \
+            -x ".idea/*"
 
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4

@@ -1,3 +1,4 @@
+# .github/workflows/azure-deploy.yml
 name: Build and deploy Python app to Azure Web App - ams-bot
 
 on:
@@ -22,32 +23,36 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: 'pip'
 
-      - name: Create and configure virtual environment
+      - name: Install dependencies
         run: |
-          python -m venv antenv
-          source antenv/bin/activate
-          python -m pip install --upgrade pip wheel setuptools
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          deactivate
-
+          
       - name: Create necessary directories
         run: |
           mkdir -p data/preprocessed
           mkdir -p data/raw
           mkdir -p frontend
 
-      - name: Generate deployment package
+      # Optional: Test the application if you have tests
+      # - name: Run tests
+      #   run: |
+      #     pip install pytest
+      #     pytest
+
+      - name: Zip artifact for deployment
         run: |
           zip -r release.zip . \
-          -x "*.git*" \
-          -x "*/__pycache__/*" \
-          -x "*.pytest_cache/*" \
-          -x "*.venv/*" \
-          -x "*/.env/*" \
-          -x "*.vscode/*" \
-          -x "*/.idea/*"
+            -x "*.git*" \
+            -x "*/__pycache__/*" \
+            -x "*.pytest_cache/*" \
+            -x ".venv/*" \
+            -x ".env" \
+            -x "*.pyc" \
+            -x ".vscode/*" \
+            -x ".idea/*"
 
-      - name: Upload artifact for deployment job
+      - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
         with:
           name: python-app
@@ -70,11 +75,16 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      - name: 'Deploy to Azure Web App'
+      - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C89356C6CDBB48F69EDCCA4140890DA5 }}
-          startup-command: 'python -m venv antenv && source antenv/bin/activate && pip install -r requirements.txt && python startup.py'
+          package: .
+          startup-command: |
+            cd /home/site/wwwroot && 
+            python -m pip install --upgrade pip &&
+            pip install -r requirements.txt &&
+            python startup.py

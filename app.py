@@ -161,16 +161,3 @@ def create_app():
 # This will be used by waitress-serve
 application = create_app()
 
-if __name__ == '__main__':
-    try:
-        port = int(os.getenv('PORT', 8000))
-        app.run(
-            host='0.0.0.0',
-            port=port,
-            threaded=True,
-            debug=True  # Enable debug mode for local development
-        )
-    except Exception as e:
-        logger.error(f"Failed to start the application: {str(e)}")
-        logger.exception("Detailed error:")
-        raise

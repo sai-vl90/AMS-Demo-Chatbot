@@ -1,5 +1,4 @@
-azure-core==1.32.0
-azure-identity==1.19.0
+
 accelerate==1.2.1
 adlfs==2024.7.0
 aiofiles==23.2.1
@@ -17,7 +16,7 @@ asttokens==2.4.1
 asyncer==0.0.7
 attrs==23.2.0
 azure-common==1.1.28
-azure-core==1.31.0
+azure-core==1.32.0
 azure-identity==1.19.0
 azure-cosmos==4.7.0
 azure-datalake-store==0.0.53

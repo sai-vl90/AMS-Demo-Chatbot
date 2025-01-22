@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'ams-bot'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C8F760D961CB405F96A8EC353065FC69 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_77A7F3DB406F409E999B2734C39C7CB6 }}

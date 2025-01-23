@@ -1,2 +1,0 @@
-# Force all .sh files to have LF line endings
-*.sh text eol=lf

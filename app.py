@@ -161,3 +161,7 @@ def create_app():
 # This will be used by waitress-serve
 application = create_app()
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56cf2d7 (Commit Initial)

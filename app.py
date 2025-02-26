@@ -158,10 +158,4 @@ def create_app():
         logger.exception("Detailed error:")
         raise
 
-# This will be used by waitress-serve
-application = create_app()
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 56cf2d7 (Commit Initial)
